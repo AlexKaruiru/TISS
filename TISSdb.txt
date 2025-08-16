@@ -1,0 +1,64 @@
+TISS INTEGRATION DATABASE OBJECTS
+=================================
+
+TABLES:
+1. TISS_Participants
+   - Stores participant information (banks/financial institutions)
+   - Columns: ParticipantID, ParticipantName, BIC, Status, CreatedDate, LastUpdated
+
+2. TISS_AuthorizationTokens
+   - Manages authentication tokens issued at Start of Day
+   - Columns: TokenID, ParticipantID, Token, BusinessDate, GeneratedAt, ExpiryDateTime, IsActive
+
+3. TISS_BusinessDates
+   - Tracks current business date for the system
+   - Columns: Currency, BusinessDate
+
+4. TISS_TimetableEvents
+   - Stores system timetable events (SOD, EOD, etc.)
+   - Columns: EventID, EventCode, EventName, StartTime, EndTime, Status, BusinessDate, Currency, CreatedAt
+
+5. TISS_Messages
+   - Records all ISO 20022 messages sent/received
+   - Columns: MessageID, ParticipantID, Direction, MessageType, Reference, Amount, Currency, 
+              ValueDate, Status, PayloadXML, ResponseXML, CreatedAt, ProcessedAt, ErrorDetails
+
+6. TISS_PendingTransactions
+   - Tracks transactions awaiting processing
+   - Columns: TransactionID, ParticipantID, MessageID, Amount, Currency, CounterpartyBIC, 
+              Status, CreatedAt, LastUpdated, RetryCount
+
+7. TISS_AccountActivities
+   - Logs all account activities/transactions
+   - Columns: ActivityID, AccountID, ParticipantID, ActivityType, Amount, Currency, 
+              BalanceAfter, BookedAt, Narrative, MessageID, Reference
+
+STORED PROCEDURES:
+1. sp_TISS_GetBusinessDate
+   - Retrieves current business date in YYYYMMDD format
+
+2. sp_TISS_GetCurrentTimetableEvent
+   - Gets the currently ongoing timetable event
+
+3. sp_TISS_ValidateToken
+   - Validates authorization token for API requests
+   - Parameters: @Token, @ParticipantBIC
+
+4. sp_TISS_StoreMessage
+   - Stores incoming/outgoing ISO 20022 messages
+   - Parameters: @MessageID, @ParticipantID, @Direction, @MessageType, @Reference, 
+                @Amount, @Currency, @ValueDate, @Status, @PayloadXML, @ResponseXML
+
+5. sp_TISS_GetPendingTransactions
+   - Retrieves pending transactions for a participant
+   - Parameters: @ParticipantID, @Currency
+
+6. sp_TISS_GetAccountActivities
+   - Gets account activities with filtering options
+   - Parameters: @ParticipantID, @AccountID, @FromDate, @ToDate, @Currency
+
+NOTES:
+- All currency fields default to 'TZS' (Tanzanian Shilling)
+- Tables include proper constraints (PK, FK, checks)
+- Procedures include comprehensive parameter handling
+- Designed for ISO 20022 message standards (pacs.008, pacs.009, admi.004)

@@ -1,0 +1,6 @@
+@BRGateway24_HostAddress = http://localhost:5263
+
+GET {{BRGateway24_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

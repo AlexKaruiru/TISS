@@ -1,0 +1,935 @@
+2025-08-15 08:18:11.715 +03:00 [FTL] CRITICAL: Stored procedure 'p_AddEditAPIAuditLogGwy24' is missing!
+2025-08-15 08:42:25.579 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 08:42:25.645 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 08:42:25.743 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 08:42:25.745 +03:00 [INF] Hosting environment: Development
+2025-08-15 08:42:25.747 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 08:42:29.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 08:42:30.065 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 418.6959ms
+2025-08-15 08:42:30.127 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 08:42:30.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 9.4052ms
+2025-08-15 08:42:30.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 08:42:30.160 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16506 application/javascript; charset=utf-8 22.1104ms
+2025-08-15 08:42:30.161 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 08:42:30.305 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 144.0738ms
+2025-08-15 08:42:30.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 08:42:30.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.9632ms
+2025-08-15 08:43:21.830 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/ESSLoan/ESSLoanApplication - null 0
+2025-08-15 08:43:21.844 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-15 08:43:21.889 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-15 08:43:21.914 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.MainResponse'.
+2025-08-15 08:43:21.929 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 32.5146ms
+2025-08-15 08:43:21.932 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-15 08:43:21.934 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/ESSLoan/ESSLoanApplication - 200 null application/json; charset=utf-8 104.082ms
+2025-08-15 08:43:41.021 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Products/GetProductList - null 0
+2025-08-15 08:43:41.059 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.ProductsController.GetProductList (BRGateway24)'
+2025-08-15 08:43:41.084 +03:00 [INF] Route matched with {action = "GetProductList", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] GetProductList() on controller BRGateway24.Controllers.ProductsController (BRGateway24).
+2025-08-15 08:43:41.226 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'BRGateway24.Models.Response'.
+2025-08-15 08:43:41.233 +03:00 [INF] Executed action BRGateway24.Controllers.ProductsController.GetProductList (BRGateway24) in 143.5894ms
+2025-08-15 08:43:41.236 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.ProductsController.GetProductList (BRGateway24)'
+2025-08-15 08:43:41.241 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Products/GetProductList - 400 null application/json; charset=utf-8 221.1473ms
+2025-08-15 08:59:40.233 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 176
+2025-08-15 08:59:40.376 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 08:59:40.544 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 08:59:55.215 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 08:59:55.232 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 14683.098ms
+2025-08-15 08:59:55.239 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 08:59:55.246 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 15025.9417ms
+2025-08-15 09:04:54.665 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 176
+2025-08-15 09:04:54.678 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:04:54.681 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:17:14.549 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:17:14.565 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 739881.8387ms
+2025-08-15 09:17:14.569 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:17:14.571 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 739906.9772ms
+2025-08-15 09:17:23.318 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:17:23.332 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:17:23.334 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:17:55.798 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:17:55.805 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 32468.5509ms
+2025-08-15 09:17:55.812 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:17:55.815 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 32498.1003ms
+2025-08-15 09:18:17.549 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:18:17.555 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:18:17.558 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:18:43.371 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:18:43.382 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 25820.0742ms
+2025-08-15 09:18:43.385 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:18:43.386 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 25838.1919ms
+2025-08-15 09:18:59.401 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:18:59.417 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:18:59.419 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:19:04.944 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:19:04.954 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 5531.0355ms
+2025-08-15 09:19:04.968 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:19:04.970 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 5569.5907ms
+2025-08-15 09:19:47.477 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:19:47.486 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:19:47.490 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:19:53.824 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:19:53.827 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 6331.0697ms
+2025-08-15 09:19:53.829 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:19:53.831 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 6353.2678ms
+2025-08-15 09:23:35.892 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:23:35.895 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:23:35.898 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:23:50.574 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:23:50.581 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 14680.9547ms
+2025-08-15 09:23:50.584 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:23:50.586 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 14694.5539ms
+2025-08-15 09:24:05.944 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:24:05.949 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:24:05.952 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:24:11.126 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:24:11.145 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 5189.9344ms
+2025-08-15 09:24:11.147 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:24:11.149 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 5205.5298ms
+2025-08-15 09:25:36.540 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 09:25:36.609 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 09:25:36.761 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 09:25:36.763 +03:00 [INF] Hosting environment: Development
+2025-08-15 09:25:36.764 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 09:25:37.206 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 09:25:37.641 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 445.4048ms
+2025-08-15 09:25:37.687 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 09:25:37.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 09:25:37.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 7.9591ms
+2025-08-15 09:25:37.711 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16506 application/javascript; charset=utf-8 16.4964ms
+2025-08-15 09:25:37.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 09:25:37.792 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.428ms
+2025-08-15 09:25:37.910 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 09:25:37.983 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.7142ms
+2025-08-15 09:25:57.919 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:25:59.791 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:25:59.897 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:26:25.558 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:26:25.569 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 25664.8014ms
+2025-08-15 09:26:25.572 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:26:25.573 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 27654.6853ms
+2025-08-15 09:26:37.828 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:26:37.833 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:26:37.834 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:26:42.320 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:26:42.323 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 4486.9246ms
+2025-08-15 09:26:42.326 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:26:42.328 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 4500.1421ms
+2025-08-15 09:27:00.595 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:27:00.601 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:27:00.603 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:27:05.534 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:27:05.544 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 4938.5809ms
+2025-08-15 09:27:05.549 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:27:05.552 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 4957.132ms
+2025-08-15 09:27:55.992 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:27:56.008 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:27:56.010 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:30:11.203 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:30:11.214 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 135202.3186ms
+2025-08-15 09:30:11.219 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:30:11.220 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 135228.6489ms
+2025-08-15 09:30:16.849 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:30:16.855 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:30:16.857 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 09:31:13.366 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 09:31:13.377 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 56518.5004ms
+2025-08-15 09:31:13.379 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:31:13.380 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 56531.7794ms
+2025-08-15 09:31:16.176 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 09:31:16.182 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 09:31:16.185 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 10:19:02.759 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 10:19:02.841 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 10:19:02.974 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 10:19:02.976 +03:00 [INF] Hosting environment: Development
+2025-08-15 10:19:02.979 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 10:19:05.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 10:19:05.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 452.6734ms
+2025-08-15 10:19:05.473 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 10:19:05.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 10:19:05.491 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 10:19:05.502 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 29.0047ms
+2025-08-15 10:19:05.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 84.644ms
+2025-08-15 10:19:05.644 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 153.6027ms
+2025-08-15 10:19:05.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 10:19:05.777 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.2977ms
+2025-08-15 10:19:29.610 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 10:19:29.659 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 10:19:29.765 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 10:19:29.770 +03:00 [INF] Hosting environment: Development
+2025-08-15 10:19:29.772 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 10:19:30.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 10:19:30.777 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 289.4129ms
+2025-08-15 10:19:30.787 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 10:19:30.787 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 10:19:30.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 10:19:30.808 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 21.1342ms
+2025-08-15 10:19:30.814 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 27.0903ms
+2025-08-15 10:19:30.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.0201ms
+2025-08-15 10:19:31.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 10:19:31.323 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.5648ms
+2025-08-15 10:44:32.480 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 10:44:32.629 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 10:44:32.738 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 10:44:32.741 +03:00 [INF] Hosting environment: Development
+2025-08-15 10:44:32.743 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 10:44:35.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 10:44:35.943 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 577.454ms
+2025-08-15 10:44:35.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 10:44:35.985 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 10:44:35.993 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 10.2926ms
+2025-08-15 10:44:36.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 25.9497ms
+2025-08-15 10:44:36.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 10:44:36.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.8395ms
+2025-08-15 10:44:36.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 10:44:36.202 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.0963ms
+2025-08-15 10:46:27.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 10:51:04.769 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 10:51:04.828 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 10:51:04.967 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 10:51:04.969 +03:00 [INF] Hosting environment: Development
+2025-08-15 10:51:04.971 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 10:51:05.748 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 10:51:06.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 10:51:06.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 10:51:06.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 10:51:06.489 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 13.4594ms
+2025-08-15 10:51:06.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 38.7407ms
+2025-08-15 10:51:06.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 754.385ms
+2025-08-15 10:51:06.569 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.3877ms
+2025-08-15 10:51:06.663 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 10:51:06.691 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.459ms
+2025-08-15 10:51:20.357 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 10:51:20.374 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:51:20.455 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 10:51:35.951 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 10:51:35.968 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 15498.0909ms
+2025-08-15 10:51:35.973 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:51:35.975 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 15617.9347ms
+2025-08-15 10:52:31.810 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 10:52:31.865 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:52:31.868 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 10:52:41.048 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 10:52:41.069 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 9194.6535ms
+2025-08-15 10:52:41.082 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:52:41.086 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 9278.0384ms
+2025-08-15 10:54:18.286 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 10:54:18.327 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 10:54:18.421 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 10:54:18.424 +03:00 [INF] Hosting environment: Development
+2025-08-15 10:54:18.426 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 10:54:19.387 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 10:54:19.858 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 483.843ms
+2025-08-15 10:54:21.453 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 10:54:21.459 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 6.2518ms
+2025-08-15 10:54:21.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 10:54:21.471 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 10:54:21.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 19.7696ms
+2025-08-15 10:54:21.557 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.8108ms
+2025-08-15 10:54:21.907 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 10:54:21.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.8171ms
+2025-08-15 10:54:35.427 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 10:54:35.441 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:54:35.688 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 10:54:35.919 +03:00 [INF] About to auth user
+2025-08-15 10:54:57.258 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 10:54:57.271 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 21570.6225ms
+2025-08-15 10:54:57.275 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:54:57.278 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 21850.2725ms
+2025-08-15 10:57:01.049 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 10:57:01.086 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 10:57:01.167 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 10:57:01.169 +03:00 [INF] Hosting environment: Development
+2025-08-15 10:57:01.172 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 10:57:02.779 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 10:57:03.228 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 459.798ms
+2025-08-15 10:57:03.239 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 10:57:03.239 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 10:57:03.250 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 10:57:03.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 20.4018ms
+2025-08-15 10:57:03.261 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 22.4665ms
+2025-08-15 10:57:03.300 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.6964ms
+2025-08-15 10:57:05.322 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 10:57:05.359 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.0528ms
+2025-08-15 10:57:13.891 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 10:57:13.916 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:57:13.986 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 10:57:14.181 +03:00 [INF] About to auth user
+2025-08-15 10:57:15.346 +03:00 [INF] [null]
+2025-08-15 10:57:26.353 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 10:57:26.375 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 12376.0047ms
+2025-08-15 10:57:26.379 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 10:57:26.381 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 12490.051ms
+2025-08-15 11:00:48.877 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:00:48.943 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:00:49.053 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:00:49.056 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:00:49.057 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:00:50.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:00:50.742 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 590.726ms
+2025-08-15 11:00:50.800 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:00:50.832 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 32.5565ms
+2025-08-15 11:00:50.889 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:00:50.890 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:00:50.922 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 33.4668ms
+2025-08-15 11:00:50.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.7546ms
+2025-08-15 11:00:51.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:00:51.176 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.2369ms
+2025-08-15 11:00:52.749 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:00:52.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 22.0297ms
+2025-08-15 11:00:52.793 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:00:52.794 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:00:52.803 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 10.133ms
+2025-08-15 11:00:52.808 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 14.9242ms
+2025-08-15 11:00:52.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:00:52.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.061ms
+2025-08-15 11:00:53.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:00:53.093 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.9556ms
+2025-08-15 11:01:09.028 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:01:09.078 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:01:09.150 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:01:09.338 +03:00 [INF] About to auth user
+2025-08-15 11:01:09.522 +03:00 [INF] [null]
+2025-08-15 11:01:22.031 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:01:22.046 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 12884.616ms
+2025-08-15 11:01:22.049 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:01:22.054 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 13026.5444ms
+2025-08-15 11:03:44.928 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:03:45.012 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:03:45.155 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:03:45.157 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:03:45.159 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:03:45.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:03:45.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 275.8823ms
+2025-08-15 11:03:45.703 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:03:45.708 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:03:45.703 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:03:45.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 16.7433ms
+2025-08-15 11:03:45.759 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 56.7123ms
+2025-08-15 11:03:45.789 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.0265ms
+2025-08-15 11:03:45.878 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:03:45.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.0341ms
+2025-08-15 11:03:52.490 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:03:52.509 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:03:52.563 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:03:52.728 +03:00 [INF] About to auth user
+2025-08-15 11:03:53.267 +03:00 [INF] [null]
+2025-08-15 11:10:24.473 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:10:24.486 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:10:24.488 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:10:24.496 +03:00 [INF] About to auth user
+2025-08-15 11:10:24.612 +03:00 [INF] [null]
+2025-08-15 11:10:54.206 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:10:54.222 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 29724.3551ms
+2025-08-15 11:10:54.225 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:10:54.228 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 29754.9971ms
+2025-08-15 11:10:54.572 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:10:54.579 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 422005.609ms
+2025-08-15 11:10:54.584 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:10:54.591 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 422102.213ms
+2025-08-15 11:14:40.742 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:14:40.835 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:14:40.952 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:14:40.953 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:14:40.955 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:14:42.956 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:14:42.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:14:43.190 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:14:43.262 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:14:43.573 +03:00 [INF] About to auth user
+2025-08-15 11:14:43.891 +03:00 [INF] [null,null]
+2025-08-15 11:14:43.893 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 962.0506ms
+2025-08-15 11:15:25.755 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:15:25.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:15:25.760 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:15:25.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 33.3836ms
+2025-08-15 11:15:25.813 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 86.1174ms
+2025-08-15 11:15:25.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 103.8153ms
+2025-08-15 11:15:25.882 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:15:25.899 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 42627.1144ms
+2025-08-15 11:15:25.902 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:15:25.905 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 42975.1572ms
+2025-08-15 11:15:26.003 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:15:26.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.5859ms
+2025-08-15 11:17:00.774 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:17:00.822 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:17:00.899 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:17:00.901 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:17:00.903 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:17:01.631 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:17:01.811 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 181.5657ms
+2025-08-15 11:17:01.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:17:01.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:17:01.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:17:01.832 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 11.6987ms
+2025-08-15 11:17:01.837 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 17.1538ms
+2025-08-15 11:17:01.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.56ms
+2025-08-15 11:17:01.961 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:17:01.979 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.4008ms
+2025-08-15 11:17:16.404 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:17:16.418 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:17:16.462 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:17:16.551 +03:00 [INF] About to auth user
+2025-08-15 11:17:16.662 +03:00 [INF] [null]
+2025-08-15 11:17:16.779 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:17:16.800 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 325.4503ms
+2025-08-15 11:17:16.803 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:17:16.806 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 402.0315ms
+2025-08-15 11:24:17.050 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:24:17.104 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:24:17.178 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:24:17.179 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:24:17.181 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:24:17.579 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:24:17.707 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 129.4376ms
+2025-08-15 11:24:17.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:24:17.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:24:17.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:24:17.725 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 6.8274ms
+2025-08-15 11:24:17.735 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 17.3202ms
+2025-08-15 11:24:17.757 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.1134ms
+2025-08-15 11:24:19.018 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:24:19.037 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.6687ms
+2025-08-15 11:24:39.743 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:24:39.787 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:24:39.843 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:24:40.170 +03:00 [INF] About to auth user
+2025-08-15 11:24:40.255 +03:00 [INF] 
+2025-08-15 11:24:41.453 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:24:41.470 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 1612.3045ms
+2025-08-15 11:24:41.473 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:24:41.476 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 1733.0074ms
+2025-08-15 11:42:16.882 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:42:16.918 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:42:16.987 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:42:16.989 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:42:16.991 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:42:18.219 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:42:18.662 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 445.0799ms
+2025-08-15 11:42:18.778 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:42:18.778 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:42:18.778 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:42:18.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 7.7784ms
+2025-08-15 11:42:18.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 21.9353ms
+2025-08-15 11:42:18.820 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.481ms
+2025-08-15 11:42:19.021 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:42:19.039 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.4768ms
+2025-08-15 11:42:22.512 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:42:22.532 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:42:22.567 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:42:22.793 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:42:22.816 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 234.3354ms
+2025-08-15 11:42:22.823 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:42:22.828 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 316.106ms
+2025-08-15 11:43:55.315 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:43:55.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 17.0112ms
+2025-08-15 11:43:56.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:43:56.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:43:56.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:43:56.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 24.4443ms
+2025-08-15 11:43:56.262 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 40.202ms
+2025-08-15 11:43:56.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.9214ms
+2025-08-15 11:43:56.463 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:43:56.482 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.8194ms
+2025-08-15 11:44:24.620 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:44:24.658 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:44:24.731 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:44:24.733 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:44:24.735 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:44:26.276 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:44:26.417 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 141.5305ms
+2025-08-15 11:44:26.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:44:26.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:44:26.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:44:26.433 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 6.4923ms
+2025-08-15 11:44:26.443 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 16.8274ms
+2025-08-15 11:44:26.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.0819ms
+2025-08-15 11:44:26.575 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:44:26.613 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.6684ms
+2025-08-15 11:44:30.321 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:44:30.336 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:44:30.355 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:44:30.411 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:44:30.425 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 59.937ms
+2025-08-15 11:44:30.429 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:44:30.432 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 111.0045ms
+2025-08-15 11:46:06.013 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:46:06.074 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:46:06.525 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:46:06.527 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:46:06.529 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:46:19.931 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:46:19.931 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:46:19.996 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:46:20.041 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:46:20.167 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:46:20.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 257.3061ms
+2025-08-15 11:46:20.192 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 128.1982ms
+2025-08-15 11:46:20.196 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:46:20.196 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:46:20.198 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:46:20.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 7.2182ms
+2025-08-15 11:46:20.207 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 279.5048ms
+2025-08-15 11:46:20.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 20.4516ms
+2025-08-15 11:46:20.228 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:46:20.266 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.9224ms
+2025-08-15 11:46:20.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:46:20.362 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.6386ms
+2025-08-15 11:46:23.297 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:46:23.308 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:46:23.313 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:46:23.327 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:46:23.332 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 11.8205ms
+2025-08-15 11:46:23.337 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:46:23.341 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 44.1277ms
+2025-08-15 11:47:01.069 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:47:01.130 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:47:01.205 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:47:01.208 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:47:01.209 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:47:01.865 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:47:02.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 266.2507ms
+2025-08-15 11:47:02.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:47:02.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:47:02.146 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:47:02.150 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 22.2833ms
+2025-08-15 11:47:02.174 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 46.9455ms
+2025-08-15 11:47:02.213 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.2317ms
+2025-08-15 11:47:02.251 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:47:02.269 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.651ms
+2025-08-15 11:47:10.266 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:47:10.284 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:47:10.336 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:47:24.389 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:47:24.402 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 14055.1497ms
+2025-08-15 11:47:24.404 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:47:24.407 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 14141.0331ms
+2025-08-15 11:47:41.404 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:47:41.410 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:47:41.414 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:47:50.027 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:47:50.033 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 8613.887ms
+2025-08-15 11:47:50.038 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:47:50.042 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 8638.9117ms
+2025-08-15 11:49:27.256 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:49:27.339 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:49:27.480 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:49:27.482 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:49:27.484 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:49:28.136 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:49:28.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 283.303ms
+2025-08-15 11:49:28.457 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:49:28.457 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:49:28.457 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:49:28.479 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 22.6009ms
+2025-08-15 11:49:28.513 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 56.3309ms
+2025-08-15 11:49:28.566 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.8185ms
+2025-08-15 11:49:28.625 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:49:28.687 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.9622ms
+2025-08-15 11:49:31.801 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:49:31.828 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:49:31.885 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:49:32.012 +03:00 [WRN] AuthenticateUser list is null or empty.
+2025-08-15 11:49:39.419 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:49:39.444 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 7545.8007ms
+2025-08-15 11:49:39.451 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:49:39.456 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 7654.7502ms
+2025-08-15 11:57:49.484 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:57:49.536 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:57:49.604 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:57:49.606 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:57:49.610 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:57:49.958 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:57:50.530 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 572.6472ms
+2025-08-15 11:57:50.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:57:50.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:57:50.545 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:57:50.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 9.5337ms
+2025-08-15 11:57:50.559 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 19.5671ms
+2025-08-15 11:57:50.600 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.7579ms
+2025-08-15 11:57:50.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:57:50.697 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.211ms
+2025-08-15 11:57:53.842 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:57:53.860 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:57:53.900 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:57:54.003 +03:00 [WRN] AuthenticateUser list is null or empty.
+2025-08-15 11:57:54.743 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:57:54.757 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 844.9505ms
+2025-08-15 11:57:54.761 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:57:54.762 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 919.9575ms
+2025-08-15 11:59:05.850 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 11:59:05.892 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 11:59:05.968 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 11:59:05.970 +03:00 [INF] Hosting environment: Development
+2025-08-15 11:59:05.973 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 11:59:06.593 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 11:59:06.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 129.662ms
+2025-08-15 11:59:06.733 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 11:59:06.733 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 11:59:06.733 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 11:59:06.748 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 15.1928ms
+2025-08-15 11:59:06.749 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 15.6296ms
+2025-08-15 11:59:06.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.1862ms
+2025-08-15 11:59:06.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 11:59:06.952 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.5033ms
+2025-08-15 11:59:20.356 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 11:59:20.373 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:59:20.426 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 11:59:20.516 +03:00 [WRN] AuthenticateUser list is null or empty.
+2025-08-15 11:59:20.732 +03:00 [WRN] AuthenticateUser list is null or empty. 2
+2025-08-15 11:59:20.786 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 11:59:20.808 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 367.8526ms
+2025-08-15 11:59:20.815 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 11:59:20.820 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 464.1036ms
+2025-08-15 12:01:18.723 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 12:01:18.779 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 12:01:18.862 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 12:01:18.863 +03:00 [INF] Hosting environment: Development
+2025-08-15 12:01:18.865 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 12:01:19.682 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 12:01:20.537 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 855.7523ms
+2025-08-15 12:01:20.554 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 12:01:20.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:01:20.562 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 12:01:20.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 31.5831ms
+2025-08-15 12:01:20.599 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 43.7326ms
+2025-08-15 12:01:20.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.0411ms
+2025-08-15 12:01:20.751 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:01:20.783 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.3923ms
+2025-08-15 12:01:27.400 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:01:27.411 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:01:27.434 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:01:27.990 +03:00 [WRN] AuthenticateUser list is null or empty. 2
+2025-08-15 12:01:28.035 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:01:28.049 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 602.9647ms
+2025-08-15 12:01:28.054 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:01:28.059 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 658.7763ms
+2025-08-15 12:03:02.686 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 12:03:02.820 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 12:03:02.941 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 12:03:02.943 +03:00 [INF] Hosting environment: Development
+2025-08-15 12:03:02.945 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 12:03:02.946 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 12:03:03.083 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 137.9218ms
+2025-08-15 12:03:03.092 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 12:03:03.092 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 12:03:03.092 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:03:03.102 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 10.059ms
+2025-08-15 12:03:03.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 19.1202ms
+2025-08-15 12:03:03.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.0089ms
+2025-08-15 12:03:03.257 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:03:03.274 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.8598ms
+2025-08-15 12:03:06.230 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:03:06.251 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:03:06.303 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:03:07.392 +03:00 [INF] AuthenticateUser list: [
+  null
+]
+2025-08-15 12:03:07.441 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:03:07.454 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 1137.9879ms
+2025-08-15 12:03:07.458 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:03:07.461 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 1231.8987ms
+2025-08-15 12:05:32.220 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 12:05:32.265 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 12:05:32.375 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 12:05:32.379 +03:00 [INF] Hosting environment: Development
+2025-08-15 12:05:32.381 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 12:05:32.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 12:05:32.579 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 161.9435ms
+2025-08-15 12:05:32.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:05:32.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 12:05:32.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 12:05:32.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 9.9364ms
+2025-08-15 12:05:32.601 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 13.1406ms
+2025-08-15 12:05:32.625 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.5267ms
+2025-08-15 12:05:33.167 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:05:33.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.9053ms
+2025-08-15 12:05:34.184 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:05:34.208 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:05:34.229 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:05:34.366 +03:00 [ERR] Error mapping AuthenticateUser from reader
+System.IndexOutOfRangeException: OutputJSON
+   at Microsoft.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at Microsoft.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at SwiftApi.Repository.Security.SystemSecurity.MapToValue(SqlDataReader reader) in C:\projects\ESS\Repository\Security\SystemSecurity.cs:line 230
+2025-08-15 12:05:34.400 +03:00 [INF] AuthenticateUser list: [
+  null
+]
+2025-08-15 12:05:34.416 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:05:34.427 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 190.551ms
+2025-08-15 12:05:34.430 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:05:34.432 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 248.0164ms
+2025-08-15 12:14:55.785 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 12:14:55.829 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 12:14:55.879 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 12:14:55.903 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 12:14:55.905 +03:00 [INF] Hosting environment: Development
+2025-08-15 12:14:55.906 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 12:14:56.035 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 156.8389ms
+2025-08-15 12:14:56.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 12:14:56.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 12:14:56.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:14:56.169 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 8.059ms
+2025-08-15 12:14:56.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 19.7959ms
+2025-08-15 12:14:56.200 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.2974ms
+2025-08-15 12:14:56.458 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:14:56.510 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.5531ms
+2025-08-15 12:14:59.962 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:14:59.973 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:15:00.008 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:15:01.222 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-15T10:19:00",
+    "IPAddress": "127.0.0.1",
+    "LoginFailureIPAddress": null,
+    "RoleID": "GMOPS",
+    "Status": 1,
+    "SessionID": "049d3be8-db19-4c3f-ac26-d147d9e06cf9BRNET_KCBL14EKIJA127.0.0.1",
+    "UserID": "0000025",
+    "Username": "EKIJA",
+    "Firstname": "EKIJA",
+    "Lastname": "EKIJA",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-15 12:15:01.373 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:15:01.389 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 1372.0727ms
+2025-08-15 12:15:01.393 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:15:01.397 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 1434.4552ms
+2025-08-15 12:22:32.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:22:32.990 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 8.776ms
+2025-08-15 12:22:33.303 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:22:33.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.4259ms
+2025-08-15 12:22:34.088 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:22:34.097 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 9.2777ms
+2025-08-15 12:22:34.195 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:22:34.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.7271ms
+2025-08-15 12:42:33.772 +03:00 [WRN] As of ""2025-08-15T09:42:33.6949299+00:00"", the heartbeat has been running for ""00:00:01.6282256"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2025-08-15 12:43:12.167 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:43:12.177 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:43:12.181 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:43:12.579 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-12T15:28:00",
+    "IPAddress": "172.16.2.58",
+    "LoginFailureIPAddress": null,
+    "RoleID": "CASH",
+    "Status": 1,
+    "SessionID": "23622682-d07a-4b67-8fe9-aace8af1b898BRNET_LIVE14STEVE172.16.2.58",
+    "UserID": "0109188",
+    "Username": "STEVE",
+    "Firstname": "STEVE",
+    "Lastname": "STEVE",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-15 12:43:12.732 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:43:12.742 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 557.5779ms
+2025-08-15 12:43:12.749 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:43:12.753 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 585.8239ms
+2025-08-15 12:43:22.673 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:43:22.678 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:43:22.681 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:43:22.709 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-12T15:28:00",
+    "IPAddress": "172.16.2.58",
+    "LoginFailureIPAddress": null,
+    "RoleID": "CASH",
+    "Status": 1,
+    "SessionID": "23622682-d07a-4b67-8fe9-aace8af1b898BRNET_LIVE14STEVE172.16.2.58",
+    "UserID": "0109188",
+    "Username": "STEVE",
+    "Firstname": "STEVE",
+    "Lastname": "STEVE",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-15 12:43:22.717 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:43:22.721 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 36.5134ms
+2025-08-15 12:43:22.724 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:43:22.726 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 52.524ms
+2025-08-15 12:44:34.934 +03:00 [WRN] As of ""2025-08-15T09:44:34.9335924+00:00"", the heartbeat has been running for ""00:00:01.1710779"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2025-08-15 12:44:52.396 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 12:44:52.464 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 12:44:52.585 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 12:44:52.588 +03:00 [INF] Hosting environment: Development
+2025-08-15 12:44:52.591 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 12:44:53.896 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 12:44:54.433 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 552.906ms
+2025-08-15 12:44:54.454 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:44:54.456 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 12:44:54.472 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 12:44:54.479 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 22.5783ms
+2025-08-15 12:44:54.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 43.5981ms
+2025-08-15 12:44:54.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.3182ms
+2025-08-15 12:44:54.628 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:44:54.656 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.2173ms
+2025-08-15 12:44:58.365 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:44:58.379 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:44:58.441 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:44:58.806 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-12T15:28:00",
+    "IPAddress": "172.16.2.58",
+    "LoginFailureIPAddress": null,
+    "RoleID": "CASH",
+    "Status": 1,
+    "SessionID": "23622682-d07a-4b67-8fe9-aace8af1b898BRNET_LIVE14STEVE172.16.2.58",
+    "UserID": "0109188",
+    "Username": "STEVE",
+    "Firstname": "STEVE",
+    "Lastname": "STEVE",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-15 12:45:09.848 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:45:09.868 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 11414.1486ms
+2025-08-15 12:45:09.873 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:45:09.878 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 11512.9386ms
+2025-08-15 12:47:20.304 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:47:20.333 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:47:20.339 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:47:20.417 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-15T10:19:00",
+    "IPAddress": "127.0.0.1",
+    "LoginFailureIPAddress": null,
+    "RoleID": "GMOPS",
+    "Status": 1,
+    "SessionID": "049d3be8-db19-4c3f-ac26-d147d9e06cf9BRNET_KCBL14EKIJA127.0.0.1",
+    "UserID": "0000025",
+    "Username": "EKIJA",
+    "Firstname": "EKIJA",
+    "Lastname": "EKIJA",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-15 12:47:20.708 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:47:20.718 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 371.1756ms
+2025-08-15 12:47:20.722 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:47:20.728 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 426.8589ms
+2025-08-15 12:53:23.843 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:53:23.861 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:53:23.864 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:53:23.989 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-12T15:28:00",
+    "IPAddress": "172.16.2.58",
+    "LoginFailureIPAddress": null,
+    "RoleID": "CASH",
+    "Status": 1,
+    "SessionID": "23622682-d07a-4b67-8fe9-aace8af1b898BRNET_LIVE14STEVE172.16.2.58",
+    "UserID": "0109188",
+    "Username": "STEVE",
+    "Firstname": "STEVE",
+    "Lastname": "STEVE",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-15 12:53:34.269 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:53:34.291 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 10419.0716ms
+2025-08-15 12:53:34.295 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:53:34.297 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 10458.7953ms
+2025-08-15 12:56:20.706 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 12:56:20.898 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 12:56:21.121 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 12:56:21.123 +03:00 [INF] Hosting environment: Development
+2025-08-15 12:56:21.125 +03:00 [INF] Content root path: C:\projects\ESS
+2025-08-15 12:56:21.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 12:56:22.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 786.5304ms
+2025-08-15 12:56:22.242 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 12:56:22.242 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 12:56:22.250 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 12:56:22.262 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 19.6646ms
+2025-08-15 12:56:22.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 16507 application/javascript; charset=utf-8 36.5232ms
+2025-08-15 12:56:22.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.1641ms
+2025-08-15 12:56:22.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 12:56:22.414 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.451ms
+2025-08-15 12:56:23.795 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7200/Login - application/json 175
+2025-08-15 12:56:23.807 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:56:23.841 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-15 12:56:24.351 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-12T15:28:00",
+    "IPAddress": "172.16.2.58",
+    "LoginFailureIPAddress": null,
+    "RoleID": "CASH",
+    "Status": 1,
+    "SessionID": "23622682-d07a-4b67-8fe9-aace8af1b898BRNET_LIVE14STEVE172.16.2.58",
+    "UserID": "0109188",
+    "Username": "STEVE",
+    "Firstname": "STEVE",
+    "Lastname": "STEVE",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-15 12:56:24.568 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-15 12:56:24.596 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 738.388ms
+2025-08-15 12:56:24.601 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-15 12:56:24.606 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7200/Login - 200 null application/json; charset=utf-8 811.2234ms
+2025-08-15 14:51:18.655 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 14:51:18.708 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 14:51:18.942 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 14:51:18.946 +03:00 [INF] Hosting environment: Development
+2025-08-15 14:51:18.949 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-15 14:51:19.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 14:51:20.066 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 431.1606ms
+2025-08-15 14:51:20.098 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 14:51:20.098 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 14:51:20.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 10.9441ms
+2025-08-15 14:51:20.132 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 34.2879ms
+2025-08-15 14:51:20.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 14:51:20.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.654ms
+2025-08-15 14:51:20.533 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 14:51:20.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.3617ms
+2025-08-15 15:32:22.701 +03:00 [INF] Now listening on: https://localhost:7200
+2025-08-15 15:32:22.746 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-15 15:32:22.830 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-15 15:32:22.833 +03:00 [INF] Hosting environment: Development
+2025-08-15 15:32:22.836 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-15 15:32:23.527 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2025-08-15 15:32:23.797 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 282.2996ms
+2025-08-15 15:32:23.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-15 15:32:23.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2025-08-15 15:32:23.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2025-08-15 15:32:23.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 18.5434ms
+2025-08-15 15:32:23.870 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 26.1699ms
+2025-08-15 15:32:23.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.4515ms
+2025-08-15 15:32:24.020 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2025-08-15 15:32:24.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 151.5353ms

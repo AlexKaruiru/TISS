@@ -1,0 +1,591 @@
+2025-08-08 15:40:56.870 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 15:40:57.051 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 15:40:57.054 +03:00 [INF] Hosting environment: Development
+2025-08-08 15:40:57.056 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 15:40:58.635 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger - null null
+2025-08-08 15:40:59.015 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger - 301 0 null 400.3526ms
+2025-08-08 15:40:59.023 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 15:40:59.135 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 114.351ms
+2025-08-08 15:40:59.160 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/swagger-ui.css - null null
+2025-08-08 15:40:59.164 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.css - null null
+2025-08-08 15:40:59.166 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/swagger-ui-standalone-preset.js - null null
+2025-08-08 15:40:59.167 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 15:40:59.168 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 15:40:59.257 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 89.9165ms
+2025-08-08 15:40:59.269 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 100.9681ms
+2025-08-08 15:40:59.165 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/swagger-ui-bundle.js - null null
+2025-08-08 15:40:59.267 +03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-08-08 15:40:59.284 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-08-08 15:40:59.308 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.css - 200 202 text/css 143.0338ms
+2025-08-08 15:40:59.319 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 152.8067ms
+2025-08-08 15:40:59.330 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 15:40:59.284 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-08-08 15:40:59.348 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/swagger-ui.css - 200 152034 text/css 188.2412ms
+2025-08-08 15:40:59.363 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-08-08 15:40:59.378 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 212.988ms
+2025-08-08 15:41:00.049 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 719.5259ms
+2025-08-08 15:41:00.127 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 15:41:00.149 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/favicon-32x32.png - null null
+2025-08-08 15:41:00.155 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-08-08 15:41:00.160 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/favicon-32x32.png - 200 628 image/png 10.2699ms
+2025-08-08 15:41:00.252 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.4643ms
+2025-08-08 15:52:33.037 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/Login - application/json 175
+2025-08-08 15:52:33.049 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 15:52:33.056 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-08 15:52:33.087 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-08 16:05:52.297 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 16:05:52.426 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 16:05:52.429 +03:00 [INF] Hosting environment: Development
+2025-08-08 16:05:52.431 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 16:05:53.470 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 16:05:53.730 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 276.2758ms
+2025-08-08 16:05:53.785 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 16:05:53.789 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 16:05:53.789 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 16:05:53.810 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 34.9291ms
+2025-08-08 16:05:53.826 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 44.0224ms
+2025-08-08 16:05:53.861 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.5843ms
+2025-08-08 16:05:54.030 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 16:05:54.167 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.0786ms
+2025-08-08 16:06:15.760 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/Login - application/json 175
+2025-08-08 16:06:15.789 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 16:06:15.795 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-08 16:06:15.817 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-08 16:06:16.169 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-08 16:06:16.180 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 354.6093ms
+2025-08-08 16:06:16.184 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-08 16:06:16.187 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/Login - 200 null application/json; charset=utf-8 427.3129ms
+2025-08-08 16:06:57.027 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - null 0
+2025-08-08 16:06:57.042 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:06:57.057 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:07:03.862 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 6800.2473ms
+2025-08-08 16:07:03.929 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:07:04.048 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ApplicationException: Failed to process ESSNewLoanDocument request
+ ---> System.ApplicationException: Failed to parse XML to ESSNewLoanDocument
+ ---> System.ApplicationException: Could not find document type for model: ESSNewLoanDocument
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.GetDocumentTypeForModel(Type modelType) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 97
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 41
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 52
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 21
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 36
+   at BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication() in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Controllers\v1\ESS\ESSLoanController.cs:line 102
+   at lambda_method11(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-08 16:07:04.062 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 500 null text/plain; charset=utf-8 7034.8652ms
+2025-08-08 16:09:44.053 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:09:44.068 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:09:44.071 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:15:21.441 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 16:15:21.572 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 16:15:21.584 +03:00 [INF] Hosting environment: Development
+2025-08-08 16:15:21.586 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 16:15:23.681 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 16:15:23.979 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 332.0976ms
+2025-08-08 16:15:24.011 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 16:15:24.012 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 16:15:24.019 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 8.6916ms
+2025-08-08 16:15:24.028 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 15.9374ms
+2025-08-08 16:15:24.067 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 16:15:24.121 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.2102ms
+2025-08-08 16:15:24.181 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 16:15:24.302 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.6689ms
+2025-08-08 16:15:27.620 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:15:27.632 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 16:15:27.638 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:15:27.669 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:17:05.057 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 16:18:20.474 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 172798.0497ms
+2025-08-08 16:18:20.534 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:18:20.670 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ApplicationException: Failed to process ESSNewLoanDocument request
+ ---> System.ApplicationException: Failed to parse XML to ESSNewLoanDocument
+ ---> System.ApplicationException: Could not find document type for model: ESSNewLoanDocument
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.GetDocumentTypeForModel(Type modelType) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 97
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 41
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 52
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 21
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 36
+   at BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication() in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Controllers\v1\ESS\ESSLoanController.cs:line 102
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-08 16:18:20.686 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 500 null text/plain; charset=utf-8 173065.7471ms
+2025-08-08 16:18:26.485 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:18:26.498 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:18:26.502 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:20:34.010 +03:00 [ERR] Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+2025-08-08 16:20:51.591 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 145085.0032ms
+2025-08-08 16:20:51.648 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:20:51.794 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ApplicationException: Failed to process request
+ ---> System.ApplicationException: Failed to parse XML dynamically
+ ---> System.InvalidOperationException: There is an error in XML document (33, 11).
+ ---> System.Xml.XmlException: Unexpected end of file has occurred. The following elements are not closed: Document. Line 33, position 11.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlReader.FinishReadElementContentAsXxx()
+   at System.Xml.XmlReader.ReadElementContentAsString()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderESSNewLoanDocument.Read9_ESSNewLoanDocument(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderESSNewLoanDocument.Read10_Document()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXmlDynamic(String xmlContent)
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXmlDynamic(String xmlContent)
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequestDynamic(String xmlContent)
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequestDynamic(String xmlContent)
+   at BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication()
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-08 16:20:51.810 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 500 null text/plain; charset=utf-8 145324.9378ms
+2025-08-08 16:20:54.826 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:20:54.834 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:20:54.840 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:26:58.117 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 16:26:58.242 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 16:26:58.252 +03:00 [INF] Hosting environment: Development
+2025-08-08 16:26:58.254 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 16:26:59.725 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 16:27:00.072 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 368.8973ms
+2025-08-08 16:27:00.108 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 16:27:00.108 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 16:27:00.108 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 16:27:00.116 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 8.3243ms
+2025-08-08 16:27:00.128 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 20.9057ms
+2025-08-08 16:27:00.159 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.9768ms
+2025-08-08 16:27:00.211 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 16:27:00.351 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 139.5431ms
+2025-08-08 16:27:03.954 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:27:03.966 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 16:27:03.971 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:27:03.999 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:27:06.901 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 16:27:53.291 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 49284.058ms
+2025-08-08 16:27:53.345 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:27:53.473 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ApplicationException: Failed to process ESSNewLoanDocument request
+ ---> System.ApplicationException: Failed to parse XML to ESSNewLoanDocument
+ ---> System.ApplicationException: Could not find document type for model: ESSNewLoanDocument
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.GetDocumentTypeForModel(Type modelType) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 97
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 41
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 52
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 21
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 36
+   at BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication() in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Controllers\v1\ESS\ESSLoanController.cs:line 102
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-08 16:27:53.489 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 500 null text/plain; charset=utf-8 49534.945ms
+2025-08-08 16:27:55.845 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:27:55.856 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:27:55.860 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:29:39.431 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 103567.0429ms
+2025-08-08 16:29:39.480 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:29:39.607 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ApplicationException: Failed to process ESSNewLoanDocument request
+ ---> System.ApplicationException: Failed to parse XML to ESSNewLoanDocument
+ ---> System.ApplicationException: Could not find document type for model: ESSNewLoanDocument
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.GetDocumentTypeForModel(Type modelType) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 97
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 41
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 52
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 21
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 36
+   at BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication() in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Controllers\v1\ESS\ESSLoanController.cs:line 102
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-08 16:29:39.619 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 500 null text/plain; charset=utf-8 103774.4193ms
+2025-08-08 16:35:15.988 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:35:16.006 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:35:16.009 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:41:02.873 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 346861.3373ms
+2025-08-08 16:41:02.927 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:41:03.068 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ApplicationException: Failed to process request
+ ---> System.ApplicationException: Failed to parse XML dynamically
+ ---> System.InvalidOperationException: There is an error in XML document (33, 11).
+ ---> System.Xml.XmlException: Unexpected end of file has occurred. The following elements are not closed: Document. Line 33, position 11.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlReader.FinishReadElementContentAsXxx()
+   at System.Xml.XmlReader.ReadElementContentAsString()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderESSNewLoanDocument.Read9_ESSNewLoanDocument(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderESSNewLoanDocument.Read10_Document()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXmlDynamic(String xmlContent)
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXmlDynamic(String xmlContent)
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequestDynamic(String xmlContent)
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequestDynamic(String xmlContent)
+   at BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication()
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-08 16:41:03.084 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 500 null text/plain; charset=utf-8 347095.7663ms
+2025-08-08 16:43:58.234 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1070
+2025-08-08 16:43:58.244 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:43:58.250 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:46:13.801 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 16:46:13.962 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 16:46:13.966 +03:00 [INF] Hosting environment: Development
+2025-08-08 16:46:13.969 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 16:46:15.228 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 16:46:16.802 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 1588.8138ms
+2025-08-08 16:46:16.835 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 16:46:16.835 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 16:46:16.835 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 16:46:16.844 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 8.9216ms
+2025-08-08 16:46:16.861 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 26.8312ms
+2025-08-08 16:46:16.893 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.2433ms
+2025-08-08 16:46:16.969 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 16:46:17.079 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 110.1825ms
+2025-08-08 16:46:20.623 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 16:46:20.634 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 16:46:20.640 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 16:46:20.667 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 16:46:23.886 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:33:49.212 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 17:33:49.545 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 17:33:49.560 +03:00 [INF] Hosting environment: Development
+2025-08-08 17:33:49.562 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 17:33:52.705 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 17:33:53.295 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 625.3515ms
+2025-08-08 17:33:53.349 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 17:33:53.349 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 17:33:53.349 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 17:33:53.364 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 15.8628ms
+2025-08-08 17:33:53.376 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 28.46ms
+2025-08-08 17:33:53.478 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 130.1221ms
+2025-08-08 17:33:53.577 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 17:33:53.905 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 327.5939ms
+2025-08-08 17:34:04.246 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:34:04.275 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 17:34:04.291 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:34:04.395 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:34:08.619 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:40:22.022 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 17:40:22.533 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 17:40:22.542 +03:00 [INF] Hosting environment: Development
+2025-08-08 17:40:22.548 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 17:40:24.681 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 17:40:25.123 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 453.876ms
+2025-08-08 17:40:25.181 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 17:40:25.181 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 17:40:25.181 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 17:40:25.200 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 19.56ms
+2025-08-08 17:40:25.209 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 29.7563ms
+2025-08-08 17:40:25.323 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 143.3147ms
+2025-08-08 17:40:25.444 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 17:40:25.710 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 266.3097ms
+2025-08-08 17:40:36.465 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:40:36.510 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 17:40:36.537 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:40:36.701 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:40:42.312 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:44:01.057 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 17:44:01.415 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 17:44:01.420 +03:00 [INF] Hosting environment: Development
+2025-08-08 17:44:01.423 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 17:44:02.861 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 17:44:03.323 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 486.8685ms
+2025-08-08 17:44:03.384 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 17:44:03.384 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 17:44:03.384 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 17:44:03.401 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 17.6536ms
+2025-08-08 17:44:03.428 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 46.3332ms
+2025-08-08 17:44:03.505 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 122.1714ms
+2025-08-08 17:44:03.602 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 17:44:03.874 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 271.4077ms
+2025-08-08 17:44:07.777 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:44:07.802 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 17:44:07.816 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:44:07.896 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:44:14.143 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:44:42.605 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 34651.8046ms
+2025-08-08 17:44:42.737 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:44:43.079 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ApplicationException: Failed to process ESSNewLoanDocument request
+ ---> System.ApplicationException: Type mismatch. Expected BRGateway24.Models.ESSModels.Request.ESSNewLoanDocument, got BRGateway24.Models.ESSModels.Request.ESSNewLoanChargesRequest
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ExtractMessageDetails[TModel](Object document) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 78
+   at BRGateway24.Helpers.ESS.LoanHelpter.XmlParser.ParseXml[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\XmlParser.cs:line 40
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 21
+   --- End of inner exception stack trace ---
+   at BRGateway24.Helpers.ESS.LoanHelpter.LoanDataProcessor.ProcessRequest[TModel](String xmlContent) in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Helpers\ESS\LoanHelpter\LoanDataProcessor.cs:line 36
+   at BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication() in D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS\Controllers\v1\ESS\ESSLoanController.cs:line 102
+   at lambda_method7(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-08 17:44:43.109 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 500 null text/plain; charset=utf-8 35331.7563ms
+2025-08-08 17:44:57.190 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:44:57.216 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:44:57.224 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:47:17.448 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 17:47:17.849 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 17:47:17.911 +03:00 [INF] Hosting environment: Development
+2025-08-08 17:47:17.922 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 17:47:19.469 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 17:47:20.037 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 584.652ms
+2025-08-08 17:47:20.131 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 17:47:20.131 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 17:47:20.135 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 17:47:20.159 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 29.8093ms
+2025-08-08 17:47:20.172 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 42.9371ms
+2025-08-08 17:47:20.295 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 160.3772ms
+2025-08-08 17:47:20.432 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 17:47:20.660 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 228.1351ms
+2025-08-08 17:47:24.031 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:47:24.104 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 17:47:24.130 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:47:24.218 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:47:28.841 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:49:56.090 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 17:49:56.443 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 17:49:56.448 +03:00 [INF] Hosting environment: Development
+2025-08-08 17:49:56.451 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 17:49:58.679 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 17:49:59.117 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 458.4073ms
+2025-08-08 17:49:59.180 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 17:49:59.186 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 17:49:59.202 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 17:49:59.219 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 41.1188ms
+2025-08-08 17:49:59.238 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 52.4779ms
+2025-08-08 17:49:59.355 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 152.936ms
+2025-08-08 17:49:59.480 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 17:49:59.817 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 336.8729ms
+2025-08-08 17:50:02.911 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:50:02.939 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 17:50:02.954 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:50:03.028 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:50:06.438 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:50:46.222 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 17:50:46.555 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 17:50:46.561 +03:00 [INF] Hosting environment: Development
+2025-08-08 17:50:46.564 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 17:50:48.755 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 17:50:49.257 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 522.1379ms
+2025-08-08 17:50:49.373 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 17:50:49.374 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 17:50:49.376 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 17:50:49.391 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 18.7236ms
+2025-08-08 17:50:49.430 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 55.0521ms
+2025-08-08 17:50:49.518 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 146.0663ms
+2025-08-08 17:50:49.631 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 17:50:49.885 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 254.273ms
+2025-08-08 17:50:52.229 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:50:52.244 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 17:50:52.251 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:50:52.295 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:50:56.519 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:54:07.901 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 17:54:08.268 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 17:54:08.272 +03:00 [INF] Hosting environment: Development
+2025-08-08 17:54:08.275 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 17:54:10.348 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 17:54:10.768 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 445.0554ms
+2025-08-08 17:54:10.816 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 17:54:10.816 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 17:54:10.816 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 17:54:10.859 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 43.439ms
+2025-08-08 17:54:10.890 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 76.3863ms
+2025-08-08 17:54:10.947 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 131.4767ms
+2025-08-08 17:54:11.053 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 17:54:11.290 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 237.0065ms
+2025-08-08 17:54:14.452 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 17:54:14.502 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 17:54:14.525 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:54:14.654 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 17:54:19.520 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 17:56:06.508 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.MainResponse'.
+2025-08-08 17:56:06.537 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 111864.1988ms
+2025-08-08 17:56:06.544 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 17:56:06.551 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 200 null application/json; charset=utf-8 112099.1764ms
+2025-08-08 22:51:46.548 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 22:51:46.677 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 22:51:46.680 +03:00 [INF] Hosting environment: Development
+2025-08-08 22:51:46.683 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 22:51:48.390 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 22:51:48.677 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 307.2193ms
+2025-08-08 22:51:48.714 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 22:51:48.714 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 22:51:48.723 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 8.5834ms
+2025-08-08 22:51:48.727 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 13.7096ms
+2025-08-08 22:51:48.762 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 22:51:48.807 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.2459ms
+2025-08-08 22:51:48.874 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 22:51:49.002 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.057ms
+2025-08-08 22:51:56.473 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 22:51:56.486 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 22:51:56.493 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 22:51:56.520 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 22:52:12.980 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 22:56:28.880 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 22:56:29.064 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 22:56:29.067 +03:00 [INF] Hosting environment: Development
+2025-08-08 22:56:29.069 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 22:56:30.613 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 22:56:30.977 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 384.2012ms
+2025-08-08 22:56:31.029 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 22:56:31.029 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 22:56:31.029 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 22:56:31.039 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 11.8593ms
+2025-08-08 22:56:31.062 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 34.2564ms
+2025-08-08 22:56:31.099 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.0082ms
+2025-08-08 22:56:31.182 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 22:56:31.407 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 224.1519ms
+2025-08-08 22:56:35.912 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 22:56:35.950 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 22:56:35.958 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 22:56:36.008 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 22:56:43.903 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 23:03:43.427 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-08 23:03:43.623 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 23:03:43.626 +03:00 [INF] Hosting environment: Development
+2025-08-08 23:03:43.627 +03:00 [INF] Content root path: D:\Source\ESS\TFS\ESSAPI\BRGateway24-ESS
+2025-08-08 23:03:44.426 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+2025-08-08 23:03:44.697 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 282.9253ms
+2025-08-08 23:03:44.728 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.js - null null
+2025-08-08 23:03:44.728 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 23:03:44.729 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-08 23:03:44.738 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.js - 200 null application/javascript;charset=utf-8 10.5078ms
+2025-08-08 23:03:44.740 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 13.5906ms
+2025-08-08 23:03:44.784 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.6451ms
+2025-08-08 23:03:44.919 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-08 23:03:45.071 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 152.4406ms
+2025-08-08 23:03:47.362 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - application/xml 1326
+2025-08-08 23:03:47.372 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-08 23:03:47.378 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 23:03:47.404 +03:00 [INF] Route matched with {action = "ESSLoanApplication", controller = "ESSLoan"}. Executing controller action with signature System.Threading.Tasks.Task`1[BRGateway24.Models.MainResponse] ESSLoanApplication() on controller BRGateway24.Controllers.v1.ESS.ESSLoanController (BRGateway24).
+2025-08-08 23:03:51.277 +03:00 [ERR] Object reference not set to an instance of an object.
+2025-08-08 23:03:54.507 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.MainResponse'.
+2025-08-08 23:03:54.521 +03:00 [INF] Executed action BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24) in 7106.3006ms
+2025-08-08 23:03:54.526 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.v1.ESS.ESSLoanController.ESSLoanApplication (BRGateway24)'
+2025-08-08 23:03:54.531 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/ESSLoan/ESSLoanApplication - 200 null application/json; charset=utf-8 7168.8074ms

@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\repository\\tiss\\tissclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:repository\\tiss\\tissclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\controllers\\tissparticipantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:controllers\\tissparticipantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\repository\\tiss\\tissparticipantrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:repository\\tiss\\tissparticipantrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\repository\\security\\isystemsecurity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:repository\\security\\isystemsecurity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\helpers\\apiregisterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:helpers\\apiregisterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\helpers\\healthychecks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:helpers\\healthychecks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|c:\\users\\alex.ndegwa\\desktop\\brnet\\tiss\\brgateway24\\dataaccess\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D55F4B8C-BBA5-48FE-ACF3-7EC2CF25F4C5}|BRGateway24.csproj|solutionrelative:dataaccess\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TISSParticipantController.cs",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Controllers\\TISSParticipantController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TISSParticipantController.cs",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Controllers\\TISSParticipantController.cs",
+              "RelativeToolTip": "Controllers\\TISSParticipantController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T12:25:35.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TISSParticipantRepo.cs",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Repository\\TISS\\TISSParticipantRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\TISS\\TISSParticipantRepo.cs",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Repository\\TISS\\TISSParticipantRepo.cs",
+              "RelativeToolTip": "Repository\\TISS\\TISSParticipantRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T12:57:16.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TissClientService.cs",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Repository\\TISS\\TissClientService.cs",
+              "RelativeDocumentMoniker": "Repository\\TISS\\TissClientService.cs",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Repository\\TISS\\TissClientService.cs",
+              "RelativeToolTip": "Repository\\TISS\\TissClientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T13:50:51.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-15T11:45:22.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISystemSecurity.cs",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Repository\\Security\\ISystemSecurity.cs",
+              "RelativeDocumentMoniker": "Repository\\Security\\ISystemSecurity.cs",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Repository\\Security\\ISystemSecurity.cs",
+              "RelativeToolTip": "Repository\\Security\\ISystemSecurity.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA7wBUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T09:48:16.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HealthyChecks.cs",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Helpers\\HealthyChecks.cs",
+              "RelativeDocumentMoniker": "Helpers\\HealthyChecks.cs",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Helpers\\HealthyChecks.cs",
+              "RelativeToolTip": "Helpers\\HealthyChecks.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBcAAACLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T09:47:25.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\DataAccess\\Constants.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Constants.cs",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\DataAccess\\Constants.cs",
+              "RelativeToolTip": "DataAccess\\Constants.cs",
+              "ViewState": "AgIAAIoBAAAAAAAAAIBJwAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T09:43:56.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApiRegisterServices.cs",
+              "DocumentMoniker": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Helpers\\ApiRegisterServices.cs",
+              "RelativeDocumentMoniker": "Helpers\\ApiRegisterServices.cs",
+              "ToolTip": "C:\\Users\\alex.ndegwa\\Desktop\\BRNET\\TISS\\BRGateway24\\Helpers\\ApiRegisterServices.cs",
+              "RelativeToolTip": "Helpers\\ApiRegisterServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T09:37:30.161Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
