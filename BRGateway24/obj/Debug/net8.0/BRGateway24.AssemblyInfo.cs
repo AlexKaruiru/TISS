@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BRGateway24")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00b523e4641811468bd7f05172b15460c8d42ad4")]
 [assembly: System.Reflection.AssemblyProductAttribute("BRGateway24")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BRGateway24")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

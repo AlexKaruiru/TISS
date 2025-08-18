@@ -2,15 +2,14 @@
 using BRGateway24.Models;
 using BRGateway24.Repository.AuditRepo;
 using BRGateway24.Repository.Common;
-using BRGateway24.Repository.ESS.Interfaces;
-using BRGateway24.Repository.Loans;
-using BRGateway24.Repository.ProductRepo;
+using BRGateway24.Repository.TISS;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.MSSqlServer;
 using SwiftApi.Repository.Security;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Net.Http.Headers;
 
 namespace BRGateway24.Helpers
 {
@@ -21,10 +20,18 @@ namespace BRGateway24.Helpers
 
             services.AddTransient<ISystemSecurity, SystemSecurity>();
             services.AddTransient<ICommonRepo, CommonRepo>();
-            services.AddTransient<IProductRepo, ProductRepo>();
-            services.AddTransient<IESSLoansRepo, ESSLoansRepo>();
             services.AddTransient<IAuditRepo, AuditRepo>();
             services.AddSingleton<HealthyChecks>();
+
+            services.AddScoped<ITISSParticipantRepo, TISSParticipantRepo>();
+            services.AddScoped<ITissClientService, TissClientService>();
+
+            services.AddHttpClient<ITissClientService, TissClientService>(client =>
+            {
+                client.BaseAddress = new Uri("https://196.46.101.90:8443/rtgs/");
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+            });
 
 
 

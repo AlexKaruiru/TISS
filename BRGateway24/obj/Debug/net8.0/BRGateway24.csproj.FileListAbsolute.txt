@@ -135,3 +135,5 @@ C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\obj\Debug\net8.0\refint\BRGa
 C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\obj\Debug\net8.0\BRGateway24.pdb
 C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\obj\Debug\net8.0\BRGateway24.genruntimeconfig.cache
 C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\obj\Debug\net8.0\ref\BRGateway24.dll
+C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\obj\Debug\net8.0\BRGateway24.sourcelink.json
+C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
