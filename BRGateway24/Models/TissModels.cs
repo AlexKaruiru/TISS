@@ -30,53 +30,8 @@ namespace BRGateway24.Models
         {
             return JsonConvert.DeserializeObject<TissApiHeaders>(json);
         }
-    }
-
-    public class TissBusinessDateResponse
-    {
-        public string Currency { get; set; }
-        public string BusinessDate { get; set; } // YYYYMMDD
-    }
-
-    public class TissTimetableEventResponse
-    {
-        public string EventCode { get; set; }
-        public string EventName { get; set; }
-        public string StartTime { get; set; } // HH:mm:ss
-        public string EndTime { get; set; }
-        public string Status { get; set; }
-    }
-
-    public class TissPendingTransaction
-    {
-        public string TransactionID { get; set; }
-        public decimal Amount { get; set; }
-        public string Currency { get; set; }
-        public string CounterpartyBIC { get; set; }
-        public string Status { get; set; }
-        public string CreatedAt { get; set; }
-    }
-
-    public class TissAccountActivity
-    {
-        public long ActivityID { get; set; }
-        public string AccountID { get; set; }
-        public string ActivityType { get; set; }
-        public decimal Amount { get; set; }
-        public string Currency { get; set; }
-        public decimal? BalanceAfter { get; set; }
-        public string BookedAt { get; set; }
-        public string Narrative { get; set; }
-        public string Reference { get; set; }
-    }
-
-    public class TissMessageResponse
-    {
-        public string MessageID { get; set; }
-        public string Status { get; set; }
-        public string ResponseDetails { get; set; }
-        public string ProcessedAt { get; set; }
-    }
+    }   
+ 
 
     public class TissSendMessageRequest
     {
@@ -89,7 +44,6 @@ namespace BRGateway24.Models
         public string Reference { get; set; }
     }
 
-    // Add these new models
     public class TissApiRequest
     {
         public long RequestID { get; set; }

@@ -2,63 +2,96 @@ TISS INTEGRATION DATABASE OBJECTS
 =================================
 
 TABLES:
-1. TISS_Participants
-   - Stores participant information (banks/financial institutions)
-   - Columns: ParticipantID, ParticipantName, BIC, Status, CreatedDate, LastUpdated
+1. TISS_ApiRequests
 
-2. TISS_AuthorizationTokens
-   - Manages authentication tokens issued at Start of Day
-   - Columns: TokenID, ParticipantID, Token, BusinessDate, GeneratedAt, ExpiryDateTime, IsActive
+	 - Stores details of every API request made to TISS.
 
-3. TISS_BusinessDates
-   - Tracks current business date for the system
-   - Columns: Currency, BusinessDate
+ 	- Columns: RequestID, MessageID, Endpoint, Method, Headers, RequestBody, RequestTime, ParticipantID
 
-4. TISS_TimetableEvents
-   - Stores system timetable events (SOD, EOD, etc.)
-   - Columns: EventID, EventCode, EventName, StartTime, EndTime, Status, BusinessDate, Currency, CreatedAt
+2. TISS_ApiResponses
 
-5. TISS_Messages
-   - Records all ISO 20022 messages sent/received
-   - Columns: MessageID, ParticipantID, Direction, MessageType, Reference, Amount, Currency, 
-              ValueDate, Status, PayloadXML, ResponseXML, CreatedAt, ProcessedAt, ErrorDetails
+ - Stores details of the responses received from TISS for each request.
 
-6. TISS_PendingTransactions
-   - Tracks transactions awaiting processing
-   - Columns: TransactionID, ParticipantID, MessageID, Amount, Currency, CounterpartyBIC, 
-              Status, CreatedAt, LastUpdated, RetryCount
+ - Columns: ResponseID, RequestID, StatusCode, ResponseBody, ResponseTime, ErrorDetails
 
-7. TISS_AccountActivities
-   - Logs all account activities/transactions
-   - Columns: ActivityID, AccountID, ParticipantID, ActivityType, Amount, Currency, 
-              BalanceAfter, BookedAt, Narrative, MessageID, Reference
 
 STORED PROCEDURES:
-1. sp_TISS_GetBusinessDate
-   - Retrieves current business date in YYYYMMDD format
 
-2. sp_TISS_GetCurrentTimetableEvent
-   - Gets the currently ongoing timetable event
 
-3. sp_TISS_ValidateToken
-   - Validates authorization token for API requests
-   - Parameters: @Token, @ParticipantBIC
+1. sp_TISS_LogApiRequest
 
-4. sp_TISS_StoreMessage
-   - Stores incoming/outgoing ISO 20022 messages
-   - Parameters: @MessageID, @ParticipantID, @Direction, @MessageType, @Reference, 
-                @Amount, @Currency, @ValueDate, @Status, @PayloadXML, @ResponseXML
+	- Logs an API request before it is sent to TISS.
 
-5. sp_TISS_GetPendingTransactions
-   - Retrieves pending transactions for a participant
-   - Parameters: @ParticipantID, @Currency
+	- Parameters: @MessageID, @Endpoint, @Method, @Headers, @RequestBody, @ParticipantID, @RequestID (OUTPUT)
 
-6. sp_TISS_GetAccountActivities
-   - Gets account activities with filtering options
-   - Parameters: @ParticipantID, @AccountID, @FromDate, @ToDate, @Currency
+2. sp_TISS_LogApiResponse
 
-NOTES:
-- All currency fields default to 'TZS' (Tanzanian Shilling)
-- Tables include proper constraints (PK, FK, checks)
-- Procedures include comprehensive parameter handling
-- Designed for ISO 20022 message standards (pacs.008, pacs.009, admi.004)
+	- Logs the response received from TISS for a given request.
+
+	- Parameters: @RequestID, @StatusCode, @ResponseBody, @ErrorDetails
+
+TABLE QUERIES:
+
+CREATE TABLE TISS_ApiRequests (
+    RequestID BIGINT PRIMARY KEY IDENTITY(1,1),
+    MessageID NVARCHAR(50) NOT NULL,
+    Endpoint NVARCHAR(100) NOT NULL,
+    Method NVARCHAR(10) NOT NULL,
+    Headers NVARCHAR(MAX) NOT NULL, -- JSON serialized headers
+    RequestBody NVARCHAR(MAX) NULL,
+    RequestTime DATETIME NOT NULL DEFAULT GETDATE(),
+    ParticipantID NVARCHAR(20) NOT NULL
+);
+
+CREATE TABLE TISS_ApiResponses (
+    ResponseID BIGINT PRIMARY KEY IDENTITY(1,1),
+    RequestID BIGINT NOT NULL,
+    StatusCode INT NOT NULL,
+    ResponseBody NVARCHAR(MAX) NULL,
+    ResponseTime DATETIME NOT NULL DEFAULT GETDATE(),
+    ErrorDetails NVARCHAR(MAX) NULL,
+    FOREIGN KEY (RequestID) REFERENCES TISS_ApiRequests(RequestID)
+);
+
+STORED PROCEDURES:
+
+-- For logging requests
+CREATE PROCEDURE sp_TISS_LogApiRequest
+    @MessageID NVARCHAR(50),
+    @Endpoint NVARCHAR(100),
+    @Method NVARCHAR(10),
+    @Headers NVARCHAR(MAX),
+    @RequestBody NVARCHAR(MAX) = NULL,
+    @ParticipantID NVARCHAR(20),
+    @RequestID BIGINT OUTPUT
+AS
+BEGIN
+    INSERT INTO TISS_ApiRequests (
+        MessageID, Endpoint, Method, Headers, 
+        RequestBody, ParticipantID, RequestTime
+    )
+    VALUES (
+        @MessageID, @Endpoint, @Method, @Headers,
+        @RequestBody, @ParticipantID, GETDATE()
+    );
+    
+    SET @RequestID = SCOPE_IDENTITY();
+END
+
+-- For logging responses
+CREATE PROCEDURE sp_TISS_LogApiResponse
+    @RequestID BIGINT,
+    @StatusCode INT,
+    @ResponseBody NVARCHAR(MAX) = NULL,
+    @ErrorDetails NVARCHAR(MAX) = NULL
+AS
+BEGIN
+    INSERT INTO TISS_ApiResponses (
+        RequestID, StatusCode, ResponseBody, 
+        ResponseTime, ErrorDetails
+    )
+    VALUES (
+        @RequestID, @StatusCode, @ResponseBody,
+        GETDATE(), @ErrorDetails
+    );
+END

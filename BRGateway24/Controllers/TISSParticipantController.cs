@@ -68,7 +68,7 @@ namespace BRGateway24.Controllers
         {
             // Implement logic to get participant ID by BIC
             // This would typically query your TISS_Participants table
-            return "PARTICIPANT1"; // Example - replace with actual implementation
+            return "PARTICIPANT1"; 
         }
 
         [HttpGet("businessDate")]

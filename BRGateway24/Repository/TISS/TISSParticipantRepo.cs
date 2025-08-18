@@ -14,16 +14,19 @@ namespace BRGateway24.Repository.TISS
         private readonly AppSettings _appSettings;
         private readonly ISystemSecurity _systemSecurity;
         private readonly ITissClientService _tissClientService;
+        private readonly ILogger<TISSParticipantRepo> _logger;
         private string _connString;
 
         public TISSParticipantRepo(
             AppSettings appSettings,
             ISystemSecurity systemSecurity,
-            ITissClientService tissClientService)
+            ITissClientService tissClientService,
+            ILogger<TISSParticipantRepo> logger)
         {
             _appSettings = appSettings;
             _systemSecurity = systemSecurity;
             _tissClientService = tissClientService;
+            _logger = logger;
         }
 
         private SqlConnection GetConnection()
@@ -50,23 +53,96 @@ namespace BRGateway24.Repository.TISS
 
             if (await reader.ReadAsync())
             {
-                return reader.GetBoolean(0); // IsValid
+                return reader.GetBoolean(0);
             }
 
             return false;
         }
 
+        private async Task<long> LogRequest(TissApiRequest request)
+        {
+            try
+            {
+                using var connection = GetConnection();
+                using var command = new SqlCommand("sp_TISS_LogApiRequest", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                command.Parameters.AddWithValue("@MessageID", request.MessageID);
+                command.Parameters.AddWithValue("@Endpoint", request.Endpoint);
+                command.Parameters.AddWithValue("@Method", request.Method);
+                command.Parameters.AddWithValue("@Headers", request.Headers);
+                command.Parameters.AddWithValue("@RequestBody", request.RequestBody ?? (object)DBNull.Value);
+                command.Parameters.AddWithValue("@ParticipantID", request.ParticipantID);
+                command.Parameters.Add("@RequestID", SqlDbType.BigInt).Direction = ParameterDirection.Output;
+
+                await connection.OpenAsync();
+                await command.ExecuteNonQueryAsync();
+
+                return (long)command.Parameters["@RequestID"].Value;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to log TISS API request");
+                return 0;
+            }
+        }
+
+        private async Task LogResponse(TissApiResponse response)
+        {
+            try
+            {
+                using var connection = GetConnection();
+                using var command = new SqlCommand("sp_TISS_LogApiResponse", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                command.Parameters.AddWithValue("@RequestID", response.RequestID);
+                command.Parameters.AddWithValue("@StatusCode", response.StatusCode);
+                command.Parameters.AddWithValue("@ResponseBody", response.ResponseBody ?? (object)DBNull.Value);
+                command.Parameters.AddWithValue("@ErrorDetails", response.ErrorDetails ?? (object)DBNull.Value);
+
+                await connection.OpenAsync();
+                await command.ExecuteNonQueryAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to log TISS API response for RequestID: {RequestID}", response.RequestID);
+            }
+        }
+
         public async Task<MainResponse> GetBusinessDateAsync(TissApiHeaders headers)
         {
             var response = new MainResponse();
+            long requestId = 0;
+
             try
             {
+                // Log the request
+                requestId = await LogRequest(new TissApiRequest
+                {
+                    MessageID = headers.MsgId,
+                    Endpoint = "interface/participants/businessDate",
+                    Method = "GET",
+                    Headers = headers.ToJson(),
+                    ParticipantID = headers.Sender
+                });
+
                 var apiResponse = await _tissClientService.SendRequestAsync(
-                    "businessdate",
-                    HttpMethod.Get,
-                    headers);
+                    "interface/participants/businessDate", HttpMethod.Get, headers);
 
                 var content = await apiResponse.Content.ReadAsStringAsync();
+
+                // Log the response
+                await LogResponse(new TissApiResponse
+                {
+                    RequestID = requestId,
+                    StatusCode = (int)apiResponse.StatusCode,
+                    ResponseBody = content,
+                    ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
+                });
 
                 if (apiResponse.IsSuccessStatusCode)
                 {
@@ -88,26 +164,56 @@ namespace BRGateway24.Repository.TISS
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Error in GetBusinessDateAsync");
+
+                if (requestId > 0)
+                {
+                    await LogResponse(new TissApiResponse
+                    {
+                        RequestID = requestId,
+                        StatusCode = 500,
+                        ErrorDetails = ex.Message
+                    });
+                }
+
                 response.resp = new Response
                 {
                     Status = "500",
                     Message = $"Error retrieving business date: {ex.Message}"
                 };
             }
+
             return response;
         }
 
         public async Task<MainResponse> GetCurrentTimetableEventAsync(TissApiHeaders headers)
         {
             var response = new MainResponse();
+            long requestId = 0;
+
             try
             {
+                requestId = await LogRequest(new TissApiRequest
+                {
+                    MessageID = headers.MsgId,
+                    Endpoint = "interface/participants/currentTimetableEvent",
+                    Method = "GET",
+                    Headers = headers.ToJson(),
+                    ParticipantID = headers.Sender
+                });
+
                 var apiResponse = await _tissClientService.SendRequestAsync(
-                    "timetable/current",
-                    HttpMethod.Get,
-                    headers);
+                    "interface/participants/currentTimetableEvent", HttpMethod.Get, headers);
 
                 var content = await apiResponse.Content.ReadAsStringAsync();
+
+                await LogResponse(new TissApiResponse
+                {
+                    RequestID = requestId,
+                    StatusCode = (int)apiResponse.StatusCode,
+                    ResponseBody = content,
+                    ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
+                });
 
                 if (apiResponse.IsSuccessStatusCode)
                 {
@@ -129,27 +235,58 @@ namespace BRGateway24.Repository.TISS
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Error in GetCurrentTimetableEventAsync");
+
+                if (requestId > 0)
+                {
+                    await LogResponse(new TissApiResponse
+                    {
+                        RequestID = requestId,
+                        StatusCode = 500,
+                        ErrorDetails = ex.Message
+                    });
+                }
+
                 response.resp = new Response
                 {
                     Status = "500",
                     Message = $"Error retrieving timetable event: {ex.Message}"
                 };
             }
+
             return response;
         }
 
         public async Task<MainResponse> GetPendingTransactionsAsync(string participantId, string currency, TissApiHeaders headers)
         {
             var response = new MainResponse();
+            long requestId = 0;
+
             try
             {
-                var endpoint = $"transactions/pending?participantId={participantId}&currency={currency}";
+                var endpoint = $"interface/participants/pendingTransactions?participantId={participantId}&currency={currency}";
+
+                requestId = await LogRequest(new TissApiRequest
+                {
+                    MessageID = headers.MsgId,
+                    Endpoint = endpoint,
+                    Method = "GET",
+                    Headers = headers.ToJson(),
+                    ParticipantID = headers.Sender
+                });
+
                 var apiResponse = await _tissClientService.SendRequestAsync(
-                    endpoint,
-                    HttpMethod.Get,
-                    headers);
+                    endpoint, HttpMethod.Get, headers);
 
                 var content = await apiResponse.Content.ReadAsStringAsync();
+
+                await LogResponse(new TissApiResponse
+                {
+                    RequestID = requestId,
+                    StatusCode = (int)apiResponse.StatusCode,
+                    ResponseBody = content,
+                    ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
+                });
 
                 if (apiResponse.IsSuccessStatusCode)
                 {
@@ -171,12 +308,25 @@ namespace BRGateway24.Repository.TISS
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Error in GetPendingTransactionsAsync");
+
+                if (requestId > 0)
+                {
+                    await LogResponse(new TissApiResponse
+                    {
+                        RequestID = requestId,
+                        StatusCode = 500,
+                        ErrorDetails = ex.Message
+                    });
+                }
+
                 response.resp = new Response
                 {
                     Status = "500",
                     Message = $"Error retrieving pending transactions: {ex.Message}"
                 };
             }
+
             return response;
         }
 
@@ -189,23 +339,40 @@ namespace BRGateway24.Repository.TISS
             TissApiHeaders headers)
         {
             var response = new MainResponse();
+            long requestId = 0;
+
             try
             {
-                var endpoint = $"accounts/activity?participantId={participantId}&currency={currency}";
+                var endpoint = $"interface/participants/accountsActivity?participantId={participantId}&currency={currency}";
 
                 if (!string.IsNullOrEmpty(accountId))
                     endpoint += $"&accountId={accountId}";
                 if (fromDate.HasValue)
-                    endpoint += $"&fromDate={fromDate.Value.ToString("yyyy-MM-dd")}";
+                    endpoint += $"&fromDate={fromDate.Value:yyyy-MM-dd}";
                 if (toDate.HasValue)
-                    endpoint += $"&toDate={toDate.Value.ToString("yyyy-MM-dd")}";
+                    endpoint += $"&toDate={toDate.Value:yyyy-MM-dd}";
+
+                requestId = await LogRequest(new TissApiRequest
+                {
+                    MessageID = headers.MsgId,
+                    Endpoint = endpoint,
+                    Method = "GET",
+                    Headers = headers.ToJson(),
+                    ParticipantID = headers.Sender
+                });
 
                 var apiResponse = await _tissClientService.SendRequestAsync(
-                    endpoint,
-                    HttpMethod.Get,
-                    headers);
+                    endpoint, HttpMethod.Get, headers);
 
                 var content = await apiResponse.Content.ReadAsStringAsync();
+
+                await LogResponse(new TissApiResponse
+                {
+                    RequestID = requestId,
+                    StatusCode = (int)apiResponse.StatusCode,
+                    ResponseBody = content,
+                    ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
+                });
 
                 if (apiResponse.IsSuccessStatusCode)
                 {
@@ -227,12 +394,25 @@ namespace BRGateway24.Repository.TISS
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Error in GetAccountActivitiesAsync");
+
+                if (requestId > 0)
+                {
+                    await LogResponse(new TissApiResponse
+                    {
+                        RequestID = requestId,
+                        StatusCode = 500,
+                        ErrorDetails = ex.Message
+                    });
+                }
+
                 response.resp = new Response
                 {
                     Status = "500",
                     Message = $"Error retrieving account activities: {ex.Message}"
                 };
             }
+
             return response;
         }
 
@@ -245,6 +425,8 @@ namespace BRGateway24.Repository.TISS
             TissApiHeaders headers)
         {
             var response = new MainResponse();
+            long requestId = 0;
+
             try
             {
                 // Validate XML
@@ -266,13 +448,28 @@ namespace BRGateway24.Repository.TISS
                 // Add content type to headers for POST request
                 headers.ContentType = "application/xml";
 
+                requestId = await LogRequest(new TissApiRequest
+                {
+                    MessageID = messageId,
+                    Endpoint = "interface/participants/message",
+                    Method = "POST",
+                    Headers = headers.ToJson(),
+                    RequestBody = payloadXml,
+                    ParticipantID = participantId
+                });
+
                 var apiResponse = await _tissClientService.SendRequestAsync(
-                    "messages",
-                    HttpMethod.Post,
-                    headers,
-                    payloadXml);
+                    "interface/participants/message", HttpMethod.Post, headers, payloadXml);
 
                 var content = await apiResponse.Content.ReadAsStringAsync();
+
+                await LogResponse(new TissApiResponse
+                {
+                    RequestID = requestId,
+                    StatusCode = (int)apiResponse.StatusCode,
+                    ResponseBody = content,
+                    ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
+                });
 
                 if (apiResponse.IsSuccessStatusCode)
                 {
@@ -297,12 +494,25 @@ namespace BRGateway24.Repository.TISS
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Error in SendMessageAsync");
+
+                if (requestId > 0)
+                {
+                    await LogResponse(new TissApiResponse
+                    {
+                        RequestID = requestId,
+                        StatusCode = 500,
+                        ErrorDetails = ex.Message
+                    });
+                }
+
                 response.resp = new Response
                 {
                     Status = "500",
                     Message = $"Error sending message: {ex.Message}"
                 };
             }
+
             return response;
         }
 
@@ -313,45 +523,55 @@ namespace BRGateway24.Repository.TISS
             string payloadXml,
             string reference)
         {
-            using var connection = GetConnection();
-            using var command = new SqlCommand("sp_TISS_StoreMessage", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-
-            command.Parameters.AddWithValue("@MessageID", messageId);
-            command.Parameters.AddWithValue("@ParticipantID", participantId);
-            command.Parameters.AddWithValue("@Direction", "OUT");
-            command.Parameters.AddWithValue("@MessageType", messageType);
-            if (!string.IsNullOrEmpty(reference))
-                command.Parameters.AddWithValue("@Reference", reference);
-            command.Parameters.AddWithValue("@Status", "SENT");
-            command.Parameters.AddWithValue("@PayloadXML", payloadXml);
-
             try
             {
-                var xmlDoc = new XmlDocument();
-                xmlDoc.LoadXml(payloadXml);
-
-                var amountNode = xmlDoc.SelectSingleNode("//IntrBkSttlmAmt");
-                if (amountNode != null)
+                using var connection = GetConnection();
+                using var command = new SqlCommand("sp_TISS_StoreMessage", connection)
                 {
-                    if (decimal.TryParse(amountNode.InnerText, out decimal amount))
-                    {
-                        command.Parameters.AddWithValue("@Amount", amount);
-                    }
+                    CommandType = CommandType.StoredProcedure
+                };
 
-                    var currency = amountNode.Attributes?["Ccy"]?.Value;
-                    if (!string.IsNullOrEmpty(currency))
+                command.Parameters.AddWithValue("@MessageID", messageId);
+                command.Parameters.AddWithValue("@ParticipantID", participantId);
+                command.Parameters.AddWithValue("@Direction", "OUT");
+                command.Parameters.AddWithValue("@MessageType", messageType);
+                command.Parameters.AddWithValue("@Reference", reference ?? (object)DBNull.Value);
+                command.Parameters.AddWithValue("@Status", "SENT");
+                command.Parameters.AddWithValue("@PayloadXML", payloadXml);
+
+                try
+                {
+                    var xmlDoc = new XmlDocument();
+                    xmlDoc.LoadXml(payloadXml);
+
+                    var amountNode = xmlDoc.SelectSingleNode("//IntrBkSttlmAmt");
+                    if (amountNode != null)
                     {
-                        command.Parameters.AddWithValue("@Currency", currency);
+                        if (decimal.TryParse(amountNode.InnerText, out decimal amount))
+                        {
+                            command.Parameters.AddWithValue("@Amount", amount);
+                        }
+
+                        var currency = amountNode.Attributes?["Ccy"]?.Value;
+                        if (!string.IsNullOrEmpty(currency))
+                        {
+                            command.Parameters.AddWithValue("@Currency", currency);
+                        }
                     }
                 }
-            }
-            catch { /* Ignore extraction errors */ }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Failed to extract amount/currency from XML payload");
+                }
 
-            await connection.OpenAsync();
-            await command.ExecuteNonQueryAsync();
+                await connection.OpenAsync();
+                await command.ExecuteNonQueryAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to store message locally");
+                throw;
+            }
         }
     }
 }
