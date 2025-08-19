@@ -9,11 +9,13 @@
         public string ConsumerKey { get; set; }
         public string ConsumerSecret { get; set; }
 
-    }
+    }   
     public class LoginReq
     {
         public MainResponse response { get; set; }
         public string AccessToken { get; set; }
+        public long ExpiresIn { get; set; } // Add expiration time
+        public string TokenType { get; set; } = "Bearer"; // Add token type
     }
     public class MainResponse
     {

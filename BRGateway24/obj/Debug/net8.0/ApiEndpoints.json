@@ -1,14 +1,30 @@
 [
   {
-    "ContainingType": "BRGateway24.Controllers.TISSParticipantController",
+    "ContainingType": "BRGateway24.Controllers.TokenController",
+    "Method": "Generate",
+    "RelativePath": "Token/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BRGateway24.Models.HeaderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TISSParticipantController",
     "Method": "GetAccountsActivity",
-    "RelativePath": "interface/participants/accountsActivity",
+    "RelativePath": "v1/MX/interface/participants/accountsActivity",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "participantId",
+        "Name": "sender",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -33,32 +49,53 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "MX"
+    ]
   },
   {
-    "ContainingType": "BRGateway24.Controllers.TISSParticipantController",
+    "ContainingType": "TISSParticipantController",
     "Method": "GetBusinessDate",
-    "RelativePath": "interface/participants/businessDate",
+    "RelativePath": "v1/MX/interface/participants/businessDate",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "currency",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "MX"
+    ]
   },
   {
-    "ContainingType": "BRGateway24.Controllers.TISSParticipantController",
+    "ContainingType": "TISSParticipantController",
     "Method": "GetCurrentTimetableEvent",
-    "RelativePath": "interface/participants/currentTimetableEvent",
+    "RelativePath": "v1/MX/interface/participants/currentTimetableEvent",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "currency",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "MX"
+    ]
   },
   {
-    "ContainingType": "BRGateway24.Controllers.TISSParticipantController",
+    "ContainingType": "TISSParticipantController",
     "Method": "PostMessage",
-    "RelativePath": "interface/participants/message",
+    "RelativePath": "v1/MX/interface/participants/message",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -69,18 +106,21 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [],
+    "Tags": [
+      "MX"
+    ]
   },
   {
-    "ContainingType": "BRGateway24.Controllers.TISSParticipantController",
+    "ContainingType": "TISSParticipantController",
     "Method": "GetPendingTransactions",
-    "RelativePath": "interface/participants/pendingTransactions",
+    "RelativePath": "v1/MX/interface/participants/pendingTransactions",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "participantId",
+        "Name": "sender",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -90,32 +130,9 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BRGateway24.Controllers.TokenController",
-    "Method": "Generate",
-    "RelativePath": "Login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "BRGateway24.Models.HeaderRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "BRGateway24.Models.LoginReq",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
+    "ReturnTypes": [],
+    "Tags": [
+      "MX"
     ]
   }
 ]

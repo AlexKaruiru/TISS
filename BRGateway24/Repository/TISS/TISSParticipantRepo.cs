@@ -5,7 +5,9 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using SwiftApi.Repository.Security;
+using System;
 using System.Data;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -58,13 +60,13 @@ namespace BRGateway24.Repository.TISS
                 {
                     return new TissApiHeaders
                     {
-                        Authorization = reader["Authorization"].ToString(),
-                        Sender = reader["Sender"].ToString(),
-                        Consumer = reader["Consumer"].ToString(),
-                        ContentType = reader["ContentType"].ToString(),
-                        PayloadType = reader["PayloadType"].ToString(),
-                        Currency = reader["Currency"].ToString(),
-                        MsgId = $"MSG_{Guid.NewGuid()}"
+                        Authorization = reader["Authorization"]?.ToString(),
+                        Sender = reader["Sender"]?.ToString(),
+                        Consumer = reader["Consumer"]?.ToString(),
+                        ContentType = reader["ContentType"]?.ToString(),
+                        PayloadType = reader["PayloadType"]?.ToString(),
+                        Currency = reader["Currency"]?.ToString() ?? "TZS",
+                        MsgId = $"MSG_{Guid.NewGuid():N}"
                     };
                 }
 
@@ -76,7 +78,7 @@ namespace BRGateway24.Repository.TISS
                 _logger.LogError(ex, "Error retrieving TISS API headers for {ConfigName}", configName);
                 return null;
             }
-        }             
+        }
 
         private async Task<long> LogRequest(TissApiRequest request)
         {
@@ -92,14 +94,21 @@ namespace BRGateway24.Repository.TISS
                 command.Parameters.AddWithValue("@Endpoint", request.Endpoint);
                 command.Parameters.AddWithValue("@Method", request.Method);
                 command.Parameters.AddWithValue("@Headers", request.Headers);
-                command.Parameters.AddWithValue("@RequestBody", request.RequestBody ?? (object)DBNull.Value);
-                command.Parameters.AddWithValue("@ParticipantID", request.ParticipantID);
-                command.Parameters.Add("@RequestID", SqlDbType.BigInt).Direction = ParameterDirection.Output;
+                command.Parameters.AddWithValue("@RequestBody",
+                    string.IsNullOrEmpty(request.RequestBody) ? (object)DBNull.Value : request.RequestBody);
+                command.Parameters.AddWithValue("@ParticipantID",
+                    string.IsNullOrEmpty(request.ParticipantID) ? (object)DBNull.Value : request.ParticipantID);
+
+                var requestIdParam = new SqlParameter("@RequestID", SqlDbType.BigInt)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(requestIdParam);
 
                 await connection.OpenAsync();
                 await command.ExecuteNonQueryAsync();
 
-                return (long)command.Parameters["@RequestID"].Value;
+                return requestIdParam.Value != DBNull.Value ? (long)requestIdParam.Value : 0;
             }
             catch (Exception ex)
             {
@@ -120,8 +129,10 @@ namespace BRGateway24.Repository.TISS
 
                 command.Parameters.AddWithValue("@RequestID", response.RequestID);
                 command.Parameters.AddWithValue("@StatusCode", response.StatusCode);
-                command.Parameters.AddWithValue("@ResponseBody", response.ResponseBody ?? (object)DBNull.Value);
-                command.Parameters.AddWithValue("@ErrorDetails", response.ErrorDetails ?? (object)DBNull.Value);
+                command.Parameters.AddWithValue("@ResponseBody",
+                    string.IsNullOrEmpty(response.ResponseBody) ? (object)DBNull.Value : response.ResponseBody);
+                command.Parameters.AddWithValue("@ErrorDetails",
+                    string.IsNullOrEmpty(response.ErrorDetails) ? (object)DBNull.Value : response.ErrorDetails);
 
                 await connection.OpenAsync();
                 await command.ExecuteNonQueryAsync();
@@ -161,23 +172,13 @@ namespace BRGateway24.Repository.TISS
                     ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
                 });
 
-                if (apiResponse.IsSuccessStatusCode)
+                // Return exact TISS response without modification
+                response.resp = new Response
                 {
-                    response.resp = new Response
-                    {
-                        Status = "000",
-                        Message = "Success",
-                        OutputJSON = content
-                    };
-                }
-                else
-                {
-                    response.resp = new Response
-                    {
-                        Status = apiResponse.StatusCode.ToString(),
-                        Message = $"Error from TISS: {content}"
-                    };
-                }
+                    Status = ((int)apiResponse.StatusCode).ToString(),
+                    Message = content,
+                    OutputJSON = apiResponse.IsSuccessStatusCode ? content : null
+                };
             }
             catch (Exception ex)
             {
@@ -196,7 +197,7 @@ namespace BRGateway24.Repository.TISS
                 response.resp = new Response
                 {
                     Status = "500",
-                    Message = $"Error retrieving business date: {ex.Message}"
+                    Message = ex.Message
                 };
             }
 
@@ -232,23 +233,12 @@ namespace BRGateway24.Repository.TISS
                     ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
                 });
 
-                if (apiResponse.IsSuccessStatusCode)
+                response.resp = new Response
                 {
-                    response.resp = new Response
-                    {
-                        Status = "000",
-                        Message = "Success",
-                        OutputJSON = content
-                    };
-                }
-                else
-                {
-                    response.resp = new Response
-                    {
-                        Status = apiResponse.StatusCode.ToString(),
-                        Message = $"Error from TISS: {content}"
-                    };
-                }
+                    Status = ((int)apiResponse.StatusCode).ToString(),
+                    Message = content,
+                    OutputJSON = apiResponse.IsSuccessStatusCode ? content : null
+                };
             }
             catch (Exception ex)
             {
@@ -267,7 +257,7 @@ namespace BRGateway24.Repository.TISS
                 response.resp = new Response
                 {
                     Status = "500",
-                    Message = $"Error retrieving timetable event: {ex.Message}"
+                    Message = ex.Message
                 };
             }
 
@@ -281,7 +271,7 @@ namespace BRGateway24.Repository.TISS
 
             try
             {
-                var endpoint = $"interface/participants/pendingTransactions?participantId={participantId}&currency={currency}";
+                var endpoint = $"interface/participants/pendingTransactions?sender={participantId}&currency={currency}";
 
                 requestId = await LogRequest(new TissApiRequest
                 {
@@ -305,23 +295,12 @@ namespace BRGateway24.Repository.TISS
                     ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
                 });
 
-                if (apiResponse.IsSuccessStatusCode)
+                response.resp = new Response
                 {
-                    response.resp = new Response
-                    {
-                        Status = "000",
-                        Message = "Success",
-                        OutputJSON = content
-                    };
-                }
-                else
-                {
-                    response.resp = new Response
-                    {
-                        Status = apiResponse.StatusCode.ToString(),
-                        Message = $"Error from TISS: {content}"
-                    };
-                }
+                    Status = ((int)apiResponse.StatusCode).ToString(),
+                    Message = content,
+                    OutputJSON = apiResponse.IsSuccessStatusCode ? content : null
+                };
             }
             catch (Exception ex)
             {
@@ -340,7 +319,7 @@ namespace BRGateway24.Repository.TISS
                 response.resp = new Response
                 {
                     Status = "500",
-                    Message = $"Error retrieving pending transactions: {ex.Message}"
+                    Message = ex.Message
                 };
             }
 
@@ -360,10 +339,10 @@ namespace BRGateway24.Repository.TISS
 
             try
             {
-                var endpoint = $"interface/participants/accountsActivity?participantId={participantId}&currency={currency}";
+                var endpoint = $"interface/participants/accountsActivity?sender={participantId}&currency={currency}";
 
                 if (!string.IsNullOrEmpty(accountId))
-                    endpoint += $"&accountId={accountId}";
+                    endpoint += $"&accountId={Uri.EscapeDataString(accountId)}";
                 if (fromDate.HasValue)
                     endpoint += $"&fromDate={fromDate.Value:yyyy-MM-dd}";
                 if (toDate.HasValue)
@@ -391,23 +370,12 @@ namespace BRGateway24.Repository.TISS
                     ErrorDetails = apiResponse.IsSuccessStatusCode ? null : content
                 });
 
-                if (apiResponse.IsSuccessStatusCode)
+                response.resp = new Response
                 {
-                    response.resp = new Response
-                    {
-                        Status = "000",
-                        Message = "Success",
-                        OutputJSON = content
-                    };
-                }
-                else
-                {
-                    response.resp = new Response
-                    {
-                        Status = apiResponse.StatusCode.ToString(),
-                        Message = $"Error from TISS: {content}"
-                    };
-                }
+                    Status = ((int)apiResponse.StatusCode).ToString(),
+                    Message = content,
+                    OutputJSON = apiResponse.IsSuccessStatusCode ? content : null
+                };
             }
             catch (Exception ex)
             {
@@ -426,7 +394,7 @@ namespace BRGateway24.Repository.TISS
                 response.resp = new Response
                 {
                     Status = "500",
-                    Message = $"Error retrieving account activities: {ex.Message}"
+                    Message = ex.Message
                 };
             }
 
@@ -460,8 +428,9 @@ namespace BRGateway24.Repository.TISS
                     return response;
                 }
 
-                // Add content type to headers for POST request
+                // Set message-specific headers
                 headers.ContentType = "application/xml";
+                headers.MsgId = reference;
 
                 requestId = await LogRequest(new TissApiRequest
                 {
@@ -489,22 +458,14 @@ namespace BRGateway24.Repository.TISS
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     await StoreMessageLocally(messageType, payloadXml, reference);
+                }
 
-                    response.resp = new Response
-                    {
-                        Status = "000",
-                        Message = "Success",
-                        OutputJSON = content
-                    };
-                }
-                else
+                response.resp = new Response
                 {
-                    response.resp = new Response
-                    {
-                        Status = apiResponse.StatusCode.ToString(),
-                        Message = $"Error from TISS: {content}"
-                    };
-                }
+                    Status = ((int)apiResponse.StatusCode).ToString(),
+                    Message = content,
+                    OutputJSON = apiResponse.IsSuccessStatusCode ? content : null
+                };
             }
             catch (Exception ex)
             {
@@ -523,17 +484,14 @@ namespace BRGateway24.Repository.TISS
                 response.resp = new Response
                 {
                     Status = "500",
-                    Message = $"Error sending message: {ex.Message}"
+                    Message = ex.Message
                 };
             }
 
             return response;
         }
 
-        private async Task StoreMessageLocally(
-            string messageType,
-            string payloadXml,
-            string reference)
+        private async Task StoreMessageLocally(string messageType, string payloadXml, string reference)
         {
             try
             {
@@ -545,16 +503,22 @@ namespace BRGateway24.Repository.TISS
 
                 command.Parameters.AddWithValue("@MessageType", messageType);
                 command.Parameters.AddWithValue("@Direction", "OUT");
-                command.Parameters.AddWithValue("@Reference", reference ?? (object)DBNull.Value);
+                command.Parameters.AddWithValue("@Reference", reference);
                 command.Parameters.AddWithValue("@Status", "SENT");
                 command.Parameters.AddWithValue("@PayloadXML", payloadXml);
 
+                // Try to extract amount and currency from XML
                 try
                 {
                     var xmlDoc = new XmlDocument();
                     xmlDoc.LoadXml(payloadXml);
 
-                    var amountNode = xmlDoc.SelectSingleNode("//IntrBkSttlmAmt");
+                    var namespaceManager = new XmlNamespaceManager(xmlDoc.NameTable);
+                    namespaceManager.AddNamespace("ns", "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08");
+
+                    var amountNode = xmlDoc.SelectSingleNode("//ns:IntrBkSttlmAmt", namespaceManager) ??
+                                    xmlDoc.SelectSingleNode("//IntrBkSttlmAmt");
+
                     if (amountNode != null)
                     {
                         if (decimal.TryParse(amountNode.InnerText, out decimal amount))
@@ -562,16 +526,17 @@ namespace BRGateway24.Repository.TISS
                             command.Parameters.AddWithValue("@Amount", amount);
                         }
 
-                        var currency = amountNode.Attributes?["Ccy"]?.Value;
-                        if (!string.IsNullOrEmpty(currency))
+                        var currencyAttr = amountNode.Attributes?["Ccy"];
+                        if (currencyAttr != null && !string.IsNullOrEmpty(currencyAttr.Value))
                         {
-                            command.Parameters.AddWithValue("@Currency", currency);
+                            command.Parameters.AddWithValue("@Currency", currencyAttr.Value);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
                     _logger.LogWarning(ex, "Failed to extract amount/currency from XML payload");
+                    // Continue without amount/currency
                 }
 
                 await connection.OpenAsync();
@@ -580,7 +545,7 @@ namespace BRGateway24.Repository.TISS
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Failed to store message locally");
-                throw;
+                // Don't throw - this shouldn't fail the main operation
             }
         }
     }

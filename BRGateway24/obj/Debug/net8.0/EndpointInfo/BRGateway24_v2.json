@@ -5,12 +5,20 @@
     "version": "v2"
   },
   "paths": {
-    "/interface/participants/businessDate": {
+    "/v1/MX/interface/participants/businessDate": {
       "get": {
         "tags": [
-          "TISSParticipant"
+          "MX"
         ],
         "parameters": [
+          {
+            "name": "currency",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "TZS"
+            }
+          },
           {
             "name": "token",
             "in": "header",
@@ -27,12 +35,20 @@
         }
       }
     },
-    "/interface/participants/currentTimetableEvent": {
+    "/v1/MX/interface/participants/currentTimetableEvent": {
       "get": {
         "tags": [
-          "TISSParticipant"
+          "MX"
         ],
         "parameters": [
+          {
+            "name": "currency",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "TZS"
+            }
+          },
           {
             "name": "token",
             "in": "header",
@@ -49,10 +65,10 @@
         }
       }
     },
-    "/interface/participants/message": {
+    "/v1/MX/interface/participants/message": {
       "post": {
         "tags": [
-          "TISSParticipant"
+          "MX"
         ],
         "parameters": [
           {
@@ -90,14 +106,14 @@
         }
       }
     },
-    "/interface/participants/pendingTransactions": {
+    "/v1/MX/interface/participants/pendingTransactions": {
       "get": {
         "tags": [
-          "TISSParticipant"
+          "MX"
         ],
         "parameters": [
           {
-            "name": "participantId",
+            "name": "sender",
             "in": "query",
             "schema": {
               "type": "string"
@@ -127,14 +143,14 @@
         }
       }
     },
-    "/interface/participants/accountsActivity": {
+    "/v1/MX/interface/participants/accountsActivity": {
       "get": {
         "tags": [
-          "TISSParticipant"
+          "MX"
         ],
         "parameters": [
           {
-            "name": "participantId",
+            "name": "sender",
             "in": "query",
             "schema": {
               "type": "string"
@@ -185,7 +201,7 @@
         }
       }
     },
-    "/Login": {
+    "/Token/Login": {
       "post": {
         "tags": [
           "Token"
@@ -211,24 +227,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginReq"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginReq"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginReq"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -244,50 +243,6 @@
             "nullable": true
           },
           "ConsumerSecret": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginReq": {
-        "type": "object",
-        "properties": {
-          "response": {
-            "$ref": "#/components/schemas/MainResponse"
-          },
-          "AccessToken": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MainResponse": {
-        "type": "object",
-        "properties": {
-          "OurBranchID": {
-            "type": "string",
-            "nullable": true
-          },
-          "resp": {
-            "$ref": "#/components/schemas/Response"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Response": {
-        "type": "object",
-        "properties": {
-          "Status": {
-            "type": "string",
-            "nullable": true
-          },
-          "OutputJSON": {
-            "type": "string",
-            "nullable": true
-          },
-          "Message": {
             "type": "string",
             "nullable": true
           }

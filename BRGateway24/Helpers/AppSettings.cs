@@ -25,7 +25,7 @@ namespace BRGateway24.Helpers
 
         public string cUsername { get; set; }
         public string cPassword { get; set; }
-        public string cBranchCode { get; set; } 
+        public string cBranchCode { get; set; }
         public string elmaHost { get; set; }
         public int Expiry { get; set; }
         public string CountryCode { get; set; }
@@ -40,7 +40,11 @@ namespace BRGateway24.Helpers
         public string ImageProxyURL { get; set; }
         public string EDMSEndpoint { get; set; }
         public string TopazBaseRoute { get; set; }
-        public string EDMSFilePath    { get;set; }
-        public string edmsBackupFilePath { get; set;}
+        public string EDMSFilePath { get; set; }
+        public string edmsBackupFilePath { get; set; }
+
+        public string JwtSecret { get; set; } // Add this
+        public string JwtIssuer { get; set; } // Add this
+        public string JwtAudience { get; set; } // Add this
     }
 }
