@@ -37,7 +37,7 @@ namespace BRGateway24.Repository.TISS
             return new SqlConnection(_connString);
         }
 
-        public async Task<bool> ValidateTokenAsync(string token, string participantBic)
+        public async Task<bool> ValidateTokenAsync(string token)
         {
             using var connection = GetConnection();
             using var command = new SqlCommand("sp_TISS_ValidateToken", connection)
@@ -46,7 +46,6 @@ namespace BRGateway24.Repository.TISS
             };
 
             command.Parameters.AddWithValue("@Token", token);
-            command.Parameters.AddWithValue("@ParticipantBIC", participantBic);
 
             await connection.OpenAsync();
             using var reader = await command.ExecuteReaderAsync();
@@ -417,8 +416,6 @@ namespace BRGateway24.Repository.TISS
         }
 
         public async Task<MainResponse> SendMessageAsync(
-            string messageId,
-            string participantId,
             string messageType,
             string payloadXml,
             string reference,
@@ -450,12 +447,10 @@ namespace BRGateway24.Repository.TISS
 
                 requestId = await LogRequest(new TissApiRequest
                 {
-                    MessageID = messageId,
                     Endpoint = "interface/participants/message",
                     Method = "POST",
                     Headers = headers.ToJson(),
                     RequestBody = payloadXml,
-                    ParticipantID = participantId
                 });
 
                 var apiResponse = await _tissClientService.SendRequestAsync(
@@ -474,7 +469,7 @@ namespace BRGateway24.Repository.TISS
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     // Store the message in local DB for tracking
-                    await StoreMessageLocally(messageId, participantId, messageType, payloadXml, reference);
+                    await StoreMessageLocally(messageType, payloadXml, reference);
 
                     response.resp = new Response
                     {
@@ -517,8 +512,6 @@ namespace BRGateway24.Repository.TISS
         }
 
         private async Task StoreMessageLocally(
-            string messageId,
-            string participantId,
             string messageType,
             string payloadXml,
             string reference)
@@ -531,8 +524,6 @@ namespace BRGateway24.Repository.TISS
                     CommandType = CommandType.StoredProcedure
                 };
 
-                command.Parameters.AddWithValue("@MessageID", messageId);
-                command.Parameters.AddWithValue("@ParticipantID", participantId);
                 command.Parameters.AddWithValue("@Direction", "OUT");
                 command.Parameters.AddWithValue("@MessageType", messageType);
                 command.Parameters.AddWithValue("@Reference", reference ?? (object)DBNull.Value);
@@ -573,5 +564,51 @@ namespace BRGateway24.Repository.TISS
                 throw;
             }
         }
+
+        public async Task<TissApiHeaders> GetTissHeadersByToken(string token)
+        {
+            try
+            {
+                using var connection = GetConnection();
+                using var command = new SqlCommand("sp_GetTissHeadersByToken", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                command.Parameters.AddWithValue("@Token", token);
+
+                await connection.OpenAsync();
+                using var reader = await command.ExecuteReaderAsync();
+
+                if (await reader.ReadAsync())
+                {
+                    var isValid = await ValidateTokenAsync(token);
+
+                    if (!isValid)
+                    {
+                        _logger.LogWarning("Invalid token for participant {ParticipantBIC}");
+                        return null;
+                    }
+
+                    return new TissApiHeaders
+                    {
+                        Authorization = "p_Ln1vhvWalugXvcMxxbNFVnesqZa-4D", 
+                        Sender = "ABCDTZTX", 
+                        Consumer = "TANZTZTX", 
+                        PayloadType = "XML", 
+                        ContentType = "application/xml" 
+                    };
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error in GetTissHeadersByToken");
+                return null;
+            }
+        }
+
+
     }
 }

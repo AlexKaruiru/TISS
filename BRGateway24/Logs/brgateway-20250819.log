@@ -1,0 +1,61 @@
+2025-08-19 08:25:25.971 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-19 08:25:26.126 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 08:25:26.129 +03:00 [INF] Hosting environment: Development
+2025-08-19 08:25:26.131 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-19 08:25:27.751 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 08:25:27.749 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-19 08:25:28.028 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13757 application/javascript; charset=utf-8 309.638ms
+2025-08-19 08:25:28.329 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 613.23ms
+2025-08-19 08:25:28.652 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-19 08:25:28.917 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 264.7597ms
+2025-08-19 08:28:14.712 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/Login - application/json 175
+2025-08-19 08:28:14.736 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-19 08:28:14.741 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-19 08:28:14.759 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature BRGateway24.Models.LoginReq Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-19 08:28:14.895 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-19T08:28:00",
+    "IPAddress": "",
+    "LoginFailureIPAddress": null,
+    "RoleID": "GMOPS",
+    "Status": 1,
+    "SessionID": "",
+    "UserID": "0000025",
+    "Username": "EKIJA",
+    "Firstname": "EKIJA",
+    "Lastname": "EKIJA",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-19 08:28:14.988 +03:00 [INF] Executing ObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-19 08:28:14.999 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 230.5441ms
+2025-08-19 08:28:15.003 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-19 08:28:15.007 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/Login - 200 null application/json; charset=utf-8 294.8215ms
+2025-08-19 08:28:48.796 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/interface/participants/businessDate - null null
+2025-08-19 08:28:48.807 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TISSParticipantController.GetBusinessDate (BRGateway24)'
+2025-08-19 08:28:48.816 +03:00 [INF] Route matched with {action = "GetBusinessDate", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBusinessDate() on controller BRGateway24.Controllers.TISSParticipantController (BRGateway24).
+2025-08-19 08:28:48.901 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-19T08:28:00",
+    "IPAddress": "",
+    "LoginFailureIPAddress": null,
+    "RoleID": "GMOPS",
+    "Status": 1,
+    "SessionID": "",
+    "UserID": "0000025",
+    "Username": "EKIJA",
+    "Firstname": "EKIJA",
+    "Lastname": "EKIJA",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]

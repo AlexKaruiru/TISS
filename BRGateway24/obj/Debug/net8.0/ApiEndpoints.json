@@ -8,6 +8,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "participantId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "accountId",
         "Type": "System.String",
         "IsRequired": false
@@ -74,6 +79,11 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "participantId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "currency",
         "Type": "System.String",

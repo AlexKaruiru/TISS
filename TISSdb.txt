@@ -53,6 +53,16 @@ CREATE TABLE TISS_ApiResponses (
     FOREIGN KEY (RequestID) REFERENCES TISS_ApiRequests(RequestID)
 );
 
+CREATE TABLE TISS_ClientConfigurations (
+    ClientId VARCHAR(50) PRIMARY KEY,
+    ClientSecret VARCHAR(100) NOT NULL,
+    TissSenderBic VARCHAR(11) NOT NULL,
+    TissAuthToken VARCHAR(100) NOT NULL,
+    IsActive BIT DEFAULT 1,
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedDate DATETIME NULL
+);
+
 STORED PROCEDURES:
 
 -- For logging requests
@@ -94,4 +104,22 @@ BEGIN
         @RequestID, @StatusCode, @ResponseBody,
         GETDATE(), @ErrorDetails
     );
+END
+
+
+
+
+
+
+CREATE PROCEDURE sp_GetTissHeadersByToken
+    @Token NVARCHAR(255)
+AS
+BEGIN
+    SELECT 
+        TissSenderBic,
+        TissAuthorization
+    FROM InternalTokenMappings
+    WHERE Token = @Token 
+      AND IsActive = 1
+      AND (ExpiryDate IS NULL OR ExpiryDate > GETDATE())
 END

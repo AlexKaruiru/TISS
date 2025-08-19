@@ -9,9 +9,9 @@ namespace BRGateway24.Models
         public string Authorization { get; set; }
 
         [Required]
-        public string Sender { get; set; } // Participant BIC
+        public string Sender { get; set; } 
 
-        public string Consumer { get; set; } = "TANZTZTX"; // Central Bank BIC
+        public string Consumer { get; set; }
 
         [Required]
         public string MsgId { get; set; }
@@ -30,8 +30,8 @@ namespace BRGateway24.Models
         {
             return JsonConvert.DeserializeObject<TissApiHeaders>(json);
         }
-    }   
- 
+    }
+
 
     public class TissSendMessageRequest
     {
@@ -65,4 +65,10 @@ namespace BRGateway24.Models
         public DateTime ResponseTime { get; set; }
         public string ErrorDetails { get; set; }
     }
-} 
+
+    public class InternalAuth
+    {
+        [Required]
+        public string Token { get; set; }  
+    }
+}

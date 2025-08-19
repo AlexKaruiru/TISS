@@ -97,6 +97,13 @@
         ],
         "parameters": [
           {
+            "name": "participantId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "currency",
             "in": "query",
             "schema": {
@@ -126,6 +133,13 @@
           "TISSParticipant"
         ],
         "parameters": [
+          {
+            "name": "participantId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "accountId",
             "in": "query",

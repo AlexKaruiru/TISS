@@ -1,4 +1,5 @@
 using BRGateway24.Models;
+using Microsoft.Extensions.Primitives;
 
 namespace BRGateway24.Repository.TISS
 {
@@ -9,8 +10,9 @@ namespace BRGateway24.Repository.TISS
         Task<MainResponse> GetPendingTransactionsAsync(string participantId, string currency, TissApiHeaders headers);
         Task<MainResponse> GetAccountActivitiesAsync(string participantId, string accountId,
             DateTime? fromDate, DateTime? toDate, string currency, TissApiHeaders headers);
-        Task<MainResponse> SendMessageAsync(string messageId, string participantId,
+        Task<MainResponse> SendMessageAsync(
             string messageType, string payloadXml, string reference, TissApiHeaders headers);
-        Task<bool> ValidateTokenAsync(string token, string participantBic);
+        Task<bool> ValidateTokenAsync(string token);
+        Task<TissApiHeaders> GetTissHeadersByToken(string token);
     }
 }
