@@ -1,36 +1,47 @@
 TISS INTEGRATION DATABASE OBJECTS
 =================================
 
-TABLES:
-1. TISS_ApiRequests
+This document captures the database schema and stored procedures used for
+integrating with the TISS system. It is structured in the following order:
 
-	 - Stores details of every API request made to TISS.
-
- 	- Columns: RequestID, MessageID, Endpoint, Method, Headers, RequestBody, RequestTime, ParticipantID
-
-2. TISS_ApiResponses
-
- - Stores details of the responses received from TISS for each request.
-
- - Columns: ResponseID, RequestID, StatusCode, ResponseBody, ResponseTime, ErrorDetails
+1. Tables
+2. Create Table Queries
+3. Stored Procedures
 
 
-STORED PROCEDURES:
+------------------------------------------------
+1. TABLES
+------------------------------------------------
+
+1.1 TISS_ApiRequests
+    - Stores details of every API request made to TISS.
+    - Columns:
+        RequestID, MessageID, Endpoint, Method, Headers, 
+        RequestBody, RequestTime, ParticipantID
+
+1.2 TISS_ApiResponses
+    - Stores details of the responses received from TISS for each request.
+    - Columns:
+        ResponseID, RequestID, StatusCode, ResponseBody,
+        ResponseTime, ErrorDetails
+
+1.3 TISS_ClientConfigurations
+    - Stores client-specific credentials and configuration for TISS.
+    - Columns:
+        ClientId, ClientSecret, TissSenderBic, TissAuthToken,
+        IsActive, CreatedDate, ModifiedDate
+
+1.4 TissApiHeadersConfig
+    - Stores reusable header configurations for TISS API calls.
+    - Columns:
+        Id, ConfigName, Authorization, Sender, Consumer,
+        DefaultContentType, DefaultPayloadType, IsActive,
+        CreatedDate, ModifiedDate
 
 
-1. sp_TISS_LogApiRequest
-
-	- Logs an API request before it is sent to TISS.
-
-	- Parameters: @MessageID, @Endpoint, @Method, @Headers, @RequestBody, @ParticipantID, @RequestID (OUTPUT)
-
-2. sp_TISS_LogApiResponse
-
-	- Logs the response received from TISS for a given request.
-
-	- Parameters: @RequestID, @StatusCode, @ResponseBody, @ErrorDetails
-
-TABLE QUERIES:
+------------------------------------------------
+2. CREATE TABLE QUERIES
+------------------------------------------------
 
 CREATE TABLE TISS_ApiRequests (
     RequestID BIGINT PRIMARY KEY IDENTITY(1,1),
@@ -63,9 +74,30 @@ CREATE TABLE TISS_ClientConfigurations (
     ModifiedDate DATETIME NULL
 );
 
-STORED PROCEDURES:
+CREATE TABLE TissApiHeadersConfig (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    ConfigName NVARCHAR(100) NOT NULL,
+    [Authorization] NVARCHAR(MAX) NOT NULL,
+    Sender NVARCHAR(20) NOT NULL,
+    Consumer NVARCHAR(20) NOT NULL,
+    DefaultContentType NVARCHAR(100) NOT NULL DEFAULT 'application/xml',
+    DefaultPayloadType NVARCHAR(50) NOT NULL DEFAULT 'XML',
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedDate DATETIME NOT NULL DEFAULT GETDATE(),
+    ModifiedDate DATETIME NULL
+);
 
--- For logging requests
+
+------------------------------------------------
+3. STORED PROCEDURES
+------------------------------------------------
+
+3.1 sp_TISS_LogApiRequest
+    - Logs an API request before it is sent to TISS.
+    - Parameters:
+        @MessageID, @Endpoint, @Method, @Headers, 
+        @RequestBody, @ParticipantID, @RequestID (OUTPUT)
+
 CREATE PROCEDURE sp_TISS_LogApiRequest
     @MessageID NVARCHAR(50),
     @Endpoint NVARCHAR(100),
@@ -86,9 +118,14 @@ BEGIN
     );
     
     SET @RequestID = SCOPE_IDENTITY();
-END
+END;
 
--- For logging responses
+
+3.2 sp_TISS_LogApiResponse
+    - Logs the response received from TISS for a given request.
+    - Parameters:
+        @RequestID, @StatusCode, @ResponseBody, @ErrorDetails
+
 CREATE PROCEDURE sp_TISS_LogApiResponse
     @RequestID BIGINT,
     @StatusCode INT,
@@ -104,12 +141,13 @@ BEGIN
         @RequestID, @StatusCode, @ResponseBody,
         GETDATE(), @ErrorDetails
     );
-END
+END;
 
 
-
-
-
+3.3 sp_GetTissHeadersByToken
+    - Retrieves TISS headers based on a given token.
+    - Parameters:
+        @Token
 
 CREATE PROCEDURE sp_GetTissHeadersByToken
     @Token NVARCHAR(255)
@@ -121,5 +159,30 @@ BEGIN
     FROM InternalTokenMappings
     WHERE Token = @Token 
       AND IsActive = 1
-      AND (ExpiryDate IS NULL OR ExpiryDate > GETDATE())
-END
+      AND (ExpiryDate IS NULL OR ExpiryDate > GETDATE());
+END;
+
+
+3.4 sp_GetTissApiHeaders
+    - Retrieves default API header configurations for TISS.
+    - Parameters:
+        @ConfigName (defaults to 'Default')
+
+CREATE PROCEDURE sp_GetTissApiHeaders
+    @ConfigName VARCHAR(100) = 'Default'
+AS
+BEGIN
+    SELECT 
+        [Authorization],
+        Sender,
+        Consumer,
+        DefaultContentType AS ContentType,
+        DefaultPayloadType AS PayloadType
+    FROM TissApiHeadersConfig
+    WHERE ConfigName = @ConfigName
+      AND IsActive = 1;
+END;
+
+------------------------------------------------
+END OF DOCUMENT
+------------------------------------------------

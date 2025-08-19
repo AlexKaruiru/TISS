@@ -9,7 +9,7 @@ namespace BRGateway24.Models
         public string Authorization { get; set; }
 
         [Required]
-        public string Sender { get; set; } 
+        public string Sender { get; set; }
 
         public string Consumer { get; set; }
 
@@ -17,18 +17,30 @@ namespace BRGateway24.Models
         public string MsgId { get; set; }
 
         // For POST messages only
-        public string ContentType { get; set; }
-        public string PayloadType { get; set; }
+        public string ContentType { get; set; } = "application/xml";
+        public string PayloadType { get; set; } = "XML";
 
-        // Move these methods inside the class
         public string ToJson()
         {
             return JsonConvert.SerializeObject(this);
         }
 
-        public static TissApiHeaders FromJson(string json)
+        public static TissApiHeaders CreateNew(
+            string authorization,
+            string sender,
+            string consumer,
+            string contentType = "application/xml",
+            string payloadType = "XML")
         {
-            return JsonConvert.DeserializeObject<TissApiHeaders>(json);
+            return new TissApiHeaders
+            {
+                Authorization = authorization,
+                Sender = sender,
+                Consumer = consumer,
+                ContentType = contentType,
+                PayloadType = payloadType,
+                MsgId = $"MSG_{Guid.NewGuid()}"
+            };
         }
     }
 

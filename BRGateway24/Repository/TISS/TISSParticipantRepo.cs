@@ -2,9 +2,11 @@ using BRGateway24.DataAccess;
 using BRGateway24.Helpers;
 using BRGateway24.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using SwiftApi.Repository.Security;
 using System.Data;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace BRGateway24.Repository.TISS
@@ -35,6 +37,44 @@ namespace BRGateway24.Repository.TISS
                 _appSettings.DBType, _appSettings.DBServerName, _appSettings.DatabaseName,
                 _appSettings.BRUserName, _appSettings.BRUserPassword, "BRGateway24API");
             return new SqlConnection(_connString);
+        }
+
+        public async Task<TissApiHeaders> GetTissApiHeaders(string configName = "Default")
+        {
+            try
+            {
+                using var connection = GetConnection();
+                using var command = new SqlCommand("sp_GetTissApiHeaders", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                command.Parameters.AddWithValue("@ConfigName", configName);
+
+                await connection.OpenAsync();
+                using var reader = await command.ExecuteReaderAsync();
+
+                if (await reader.ReadAsync())
+                {
+                    return new TissApiHeaders
+                    {
+                        Authorization = reader["Authorization"].ToString(),
+                        Sender = reader["Sender"].ToString(),
+                        Consumer = reader["Consumer"].ToString(),
+                        ContentType = reader["ContentType"].ToString(),
+                        PayloadType = reader["PayloadType"].ToString(),
+                        MsgId = $"MSG_{Guid.NewGuid()}"
+                    };
+                }
+
+                _logger.LogError("No TISS API headers configuration found for {ConfigName}", configName);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving TISS API headers for {ConfigName}", configName);
+                return null;
+            }
         }
 
         public async Task<bool> ValidateTokenAsync(string token)
@@ -119,7 +159,6 @@ namespace BRGateway24.Repository.TISS
 
             try
             {
-                // Log the request
                 requestId = await LogRequest(new TissApiRequest
                 {
                     MessageID = headers.MsgId,
@@ -134,7 +173,6 @@ namespace BRGateway24.Repository.TISS
 
                 var content = await apiResponse.Content.ReadAsStringAsync();
 
-                // Log the response
                 await LogResponse(new TissApiResponse
                 {
                     RequestID = requestId,
@@ -447,10 +485,12 @@ namespace BRGateway24.Repository.TISS
 
                 requestId = await LogRequest(new TissApiRequest
                 {
+                    MessageID = headers.MsgId,
                     Endpoint = "interface/participants/message",
                     Method = "POST",
                     Headers = headers.ToJson(),
                     RequestBody = payloadXml,
+                    ParticipantID = headers.Sender
                 });
 
                 var apiResponse = await _tissClientService.SendRequestAsync(
@@ -468,7 +508,6 @@ namespace BRGateway24.Repository.TISS
 
                 if (apiResponse.IsSuccessStatusCode)
                 {
-                    // Store the message in local DB for tracking
                     await StoreMessageLocally(messageType, payloadXml, reference);
 
                     response.resp = new Response
@@ -524,8 +563,8 @@ namespace BRGateway24.Repository.TISS
                     CommandType = CommandType.StoredProcedure
                 };
 
-                command.Parameters.AddWithValue("@Direction", "OUT");
                 command.Parameters.AddWithValue("@MessageType", messageType);
+                command.Parameters.AddWithValue("@Direction", "OUT");
                 command.Parameters.AddWithValue("@Reference", reference ?? (object)DBNull.Value);
                 command.Parameters.AddWithValue("@Status", "SENT");
                 command.Parameters.AddWithValue("@PayloadXML", payloadXml);
@@ -564,51 +603,5 @@ namespace BRGateway24.Repository.TISS
                 throw;
             }
         }
-
-        public async Task<TissApiHeaders> GetTissHeadersByToken(string token)
-        {
-            try
-            {
-                using var connection = GetConnection();
-                using var command = new SqlCommand("sp_GetTissHeadersByToken", connection)
-                {
-                    CommandType = CommandType.StoredProcedure
-                };
-
-                command.Parameters.AddWithValue("@Token", token);
-
-                await connection.OpenAsync();
-                using var reader = await command.ExecuteReaderAsync();
-
-                if (await reader.ReadAsync())
-                {
-                    var isValid = await ValidateTokenAsync(token);
-
-                    if (!isValid)
-                    {
-                        _logger.LogWarning("Invalid token for participant {ParticipantBIC}");
-                        return null;
-                    }
-
-                    return new TissApiHeaders
-                    {
-                        Authorization = "p_Ln1vhvWalugXvcMxxbNFVnesqZa-4D", 
-                        Sender = "ABCDTZTX", 
-                        Consumer = "TANZTZTX", 
-                        PayloadType = "XML", 
-                        ContentType = "application/xml" 
-                    };
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error in GetTissHeadersByToken");
-                return null;
-            }
-        }
-
-
     }
 }
