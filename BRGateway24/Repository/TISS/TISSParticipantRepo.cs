@@ -63,6 +63,7 @@ namespace BRGateway24.Repository.TISS
                         Consumer = reader["Consumer"].ToString(),
                         ContentType = reader["ContentType"].ToString(),
                         PayloadType = reader["PayloadType"].ToString(),
+                        Currency = reader["Currency"].ToString(),
                         MsgId = $"MSG_{Guid.NewGuid()}"
                     };
                 }

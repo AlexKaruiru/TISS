@@ -589,3 +589,13 @@ System.Net.Http.HttpRequestException: A connection attempt failed because the co
 2025-08-19 10:31:19.902 +03:00 [INF] Executed action BRGateway24.Controllers.TISSParticipantController.GetBusinessDate (BRGateway24) in 21511.954ms
 2025-08-19 10:31:19.907 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TISSParticipantController.GetBusinessDate (BRGateway24)'
 2025-08-19 10:31:19.912 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/interface/participants/businessDate - 500 null application/json; charset=utf-8 21543.4354ms
+2025-08-19 10:40:29.895 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-19 10:40:30.295 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 10:40:30.518 +03:00 [INF] Hosting environment: Development
+2025-08-19 10:40:30.526 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-19 10:40:32.329 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 10:40:32.330 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-19 10:40:32.378 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 78.7738ms
+2025-08-19 10:40:32.799 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 501.7704ms
+2025-08-19 10:40:32.909 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-19 10:40:33.058 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.1461ms

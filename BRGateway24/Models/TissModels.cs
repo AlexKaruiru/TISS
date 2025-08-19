@@ -20,6 +20,8 @@ namespace BRGateway24.Models
         public string ContentType { get; set; } = "application/xml";
         public string PayloadType { get; set; } = "XML";
 
+        public string Currency { get; set; } = "TZS";
+
         public string ToJson()
         {
             return JsonConvert.SerializeObject(this);
@@ -30,7 +32,8 @@ namespace BRGateway24.Models
             string sender,
             string consumer,
             string contentType = "application/xml",
-            string payloadType = "XML")
+            string payloadType = "XML",
+            string currency = "TZS")
         {
             return new TissApiHeaders
             {
@@ -39,6 +42,7 @@ namespace BRGateway24.Models
                 Consumer = consumer,
                 ContentType = contentType,
                 PayloadType = payloadType,
+                Currency = currency,
                 MsgId = $"MSG_{Guid.NewGuid()}"
             };
         }
