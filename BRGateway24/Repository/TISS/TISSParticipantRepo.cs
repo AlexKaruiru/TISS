@@ -44,7 +44,7 @@ namespace BRGateway24.Repository.TISS
             try
             {
                 using var connection = GetConnection();
-                using var command = new SqlCommand("sp_GetTissApiHeaders", connection)
+                using var command = new SqlCommand("p_GetMXApiHeaders", connection)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -76,35 +76,14 @@ namespace BRGateway24.Repository.TISS
                 _logger.LogError(ex, "Error retrieving TISS API headers for {ConfigName}", configName);
                 return null;
             }
-        }
-
-        public async Task<bool> ValidateTokenAsync(string token)
-        {
-            using var connection = GetConnection();
-            using var command = new SqlCommand("sp_TISS_ValidateToken", connection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-
-            command.Parameters.AddWithValue("@Token", token);
-
-            await connection.OpenAsync();
-            using var reader = await command.ExecuteReaderAsync();
-
-            if (await reader.ReadAsync())
-            {
-                return reader.GetBoolean(0);
-            }
-
-            return false;
-        }
+        }             
 
         private async Task<long> LogRequest(TissApiRequest request)
         {
             try
             {
                 using var connection = GetConnection();
-                using var command = new SqlCommand("sp_TISS_LogApiRequest", connection)
+                using var command = new SqlCommand("p_MXLogApiRequest", connection)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -134,7 +113,7 @@ namespace BRGateway24.Repository.TISS
             try
             {
                 using var connection = GetConnection();
-                using var command = new SqlCommand("sp_TISS_LogApiResponse", connection)
+                using var command = new SqlCommand("p_MXLogApiResponse", connection)
                 {
                     CommandType = CommandType.StoredProcedure
                 };

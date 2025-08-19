@@ -15,8 +15,7 @@ namespace BRGateway24.Repository.TISS
             string payloadXml,
             string reference,
             TissApiHeaders headers);
-        Task<TissApiHeaders> GetTissApiHeaders(string configName = "Default");
-        Task<bool> ValidateTokenAsync(string token);
+        Task<TissApiHeaders> GetTissApiHeaders(string configName = "Default");       
     }
 }
 

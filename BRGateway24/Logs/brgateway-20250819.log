@@ -599,3 +599,13 @@ System.Net.Http.HttpRequestException: A connection attempt failed because the co
 2025-08-19 10:40:32.799 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 501.7704ms
 2025-08-19 10:40:32.909 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
 2025-08-19 10:40:33.058 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.1461ms
+2025-08-19 11:26:30.726 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-19 11:26:30.893 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-19 11:26:30.895 +03:00 [INF] Hosting environment: Development
+2025-08-19 11:26:30.897 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-19 11:26:32.154 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-19 11:26:32.155 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-19 11:26:32.218 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13757 application/javascript; charset=utf-8 75.5588ms
+2025-08-19 11:26:32.469 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 331.9764ms
+2025-08-19 11:26:32.567 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-19 11:26:32.676 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.447ms

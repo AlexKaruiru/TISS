@@ -13,25 +13,19 @@ integrating with the TISS system. It is structured in the following order:
 1. TABLES
 ------------------------------------------------
 
-1.1 TISS_ApiRequests
+1.1 t_MXApiRequests
     - Stores details of every API request made to TISS.
     - Columns:
         RequestID, MessageID, Endpoint, Method, Headers, 
         RequestBody, RequestTime, ParticipantID
 
-1.2 TISS_ApiResponses
+1.2 t_MXApiResponses
     - Stores details of the responses received from TISS for each request.
     - Columns:
         ResponseID, RequestID, StatusCode, ResponseBody,
         ResponseTime, ErrorDetails
 
-1.3 TISS_ClientConfigurations
-    - Stores client-specific credentials and configuration for TISS.
-    - Columns:
-        ClientId, ClientSecret, TissSenderBic, TissAuthToken,
-        IsActive, CreatedDate, ModifiedDate
-
-1.4 TissApiHeadersConfig
+1.3 t_MXApiHeadersConfig
     - Stores reusable header configurations for TISS API calls.
     - Columns:
         Id, ConfigName, Authorization, Sender, Consumer,
@@ -43,38 +37,28 @@ integrating with the TISS system. It is structured in the following order:
 2. CREATE TABLE QUERIES
 ------------------------------------------------
 
-CREATE TABLE TISS_ApiRequests (
+CREATE TABLE t_MXApiRequests (
     RequestID BIGINT PRIMARY KEY IDENTITY(1,1),
     MessageID NVARCHAR(50) NOT NULL,
     Endpoint NVARCHAR(100) NOT NULL,
     Method NVARCHAR(10) NOT NULL,
-    Headers NVARCHAR(MAX) NOT NULL, -- JSON serialized headers
-    RequestBody NVARCHAR(MAX) NULL,
+    Headers NVARCHAR(MAX) NOT NULL, 
+    RequestBody XML,
     RequestTime DATETIME NOT NULL DEFAULT GETDATE(),
     ParticipantID NVARCHAR(20) NOT NULL
 );
 
-CREATE TABLE TISS_ApiResponses (
+CREATE TABLE t_MXApiResponses (
     ResponseID BIGINT PRIMARY KEY IDENTITY(1,1),
     RequestID BIGINT NOT NULL,
     StatusCode INT NOT NULL,
     ResponseBody NVARCHAR(MAX) NULL,
     ResponseTime DATETIME NOT NULL DEFAULT GETDATE(),
     ErrorDetails NVARCHAR(MAX) NULL,
-    FOREIGN KEY (RequestID) REFERENCES TISS_ApiRequests(RequestID)
+    FOREIGN KEY (RequestID) REFERENCES t_MXApiRequests(RequestID)
 );
 
-CREATE TABLE TISS_ClientConfigurations (
-    ClientId VARCHAR(50) PRIMARY KEY,
-    ClientSecret VARCHAR(100) NOT NULL,
-    TissSenderBic VARCHAR(11) NOT NULL,
-    TissAuthToken VARCHAR(100) NOT NULL,
-    IsActive BIT DEFAULT 1,
-    CreatedDate DATETIME DEFAULT GETDATE(),
-    ModifiedDate DATETIME NULL
-);
-
-CREATE TABLE TissApiHeadersConfig (
+CREATE TABLE t_MXApiHeadersConfig (
     Id INT PRIMARY KEY IDENTITY(1,1),
     ConfigName NVARCHAR(100) NOT NULL,
     [Authorization] NVARCHAR(MAX) NOT NULL,
@@ -82,6 +66,7 @@ CREATE TABLE TissApiHeadersConfig (
     Consumer NVARCHAR(20) NOT NULL,
     DefaultContentType NVARCHAR(100) NOT NULL DEFAULT 'application/xml',
     DefaultPayloadType NVARCHAR(50) NOT NULL DEFAULT 'XML',
+    DefaultCurrency VARCHAR(3) NOT NULL DEFAULT 'TZS',
     IsActive BIT NOT NULL DEFAULT 1,
     CreatedDate DATETIME NOT NULL DEFAULT GETDATE(),
     ModifiedDate DATETIME NULL
@@ -92,23 +77,23 @@ CREATE TABLE TissApiHeadersConfig (
 3. STORED PROCEDURES
 ------------------------------------------------
 
-3.1 sp_TISS_LogApiRequest
+3.1 p_MXLogApiRequest
     - Logs an API request before it is sent to TISS.
     - Parameters:
         @MessageID, @Endpoint, @Method, @Headers, 
         @RequestBody, @ParticipantID, @RequestID (OUTPUT)
 
-CREATE PROCEDURE sp_TISS_LogApiRequest
+CREATE PROCEDURE p_MXLogApiRequest
     @MessageID NVARCHAR(50),
     @Endpoint NVARCHAR(100),
     @Method NVARCHAR(10),
     @Headers NVARCHAR(MAX),
-    @RequestBody NVARCHAR(MAX) = NULL,
+    @RequestBody XML,
     @ParticipantID NVARCHAR(20),
     @RequestID BIGINT OUTPUT
 AS
 BEGIN
-    INSERT INTO TISS_ApiRequests (
+    INSERT INTO t_MXApiRequests (
         MessageID, Endpoint, Method, Headers, 
         RequestBody, ParticipantID, RequestTime
     )
@@ -121,19 +106,19 @@ BEGIN
 END;
 
 
-3.2 sp_TISS_LogApiResponse
+3.2 p_MXLogApiResponse
     - Logs the response received from TISS for a given request.
     - Parameters:
         @RequestID, @StatusCode, @ResponseBody, @ErrorDetails
 
-CREATE PROCEDURE sp_TISS_LogApiResponse
+CREATE PROCEDURE p_MXLogApiResponse
     @RequestID BIGINT,
     @StatusCode INT,
     @ResponseBody NVARCHAR(MAX) = NULL,
     @ErrorDetails NVARCHAR(MAX) = NULL
 AS
 BEGIN
-    INSERT INTO TISS_ApiResponses (
+    INSERT INTO t_MXApiResponses (
         RequestID, StatusCode, ResponseBody, 
         ResponseTime, ErrorDetails
     )
@@ -144,31 +129,13 @@ BEGIN
 END;
 
 
-3.3 sp_GetTissHeadersByToken
-    - Retrieves TISS headers based on a given token.
-    - Parameters:
-        @Token
 
-CREATE PROCEDURE sp_GetTissHeadersByToken
-    @Token NVARCHAR(255)
-AS
-BEGIN
-    SELECT 
-        TissSenderBic,
-        TissAuthorization
-    FROM InternalTokenMappings
-    WHERE Token = @Token 
-      AND IsActive = 1
-      AND (ExpiryDate IS NULL OR ExpiryDate > GETDATE());
-END;
-
-
-3.4 sp_GetTissApiHeaders
+3.3 p_GetMXApiHeaders
     - Retrieves default API header configurations for TISS.
     - Parameters:
         @ConfigName (defaults to 'Default')
 
-CREATE PROCEDURE sp_GetTissApiHeaders
+CREATE PROCEDURE p_GetMXApiHeaders
     @ConfigName VARCHAR(100) = 'Default'
 AS
 BEGIN
@@ -178,7 +145,7 @@ BEGIN
         Consumer,
         DefaultContentType AS ContentType,
         DefaultPayloadType AS PayloadType
-    FROM TissApiHeadersConfig
+    FROM t_MXApiHeadersConfig
     WHERE ConfigName = @ConfigName
       AND IsActive = 1;
 END;

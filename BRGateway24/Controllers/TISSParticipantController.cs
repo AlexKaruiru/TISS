@@ -69,10 +69,10 @@ namespace BRGateway24.Controllers
         {
             try
             {
-                if (!Request.Headers.TryGetValue("Content-Type", out var contentType) ||
-                    (!contentType.ToString().Contains("text/xml") && !contentType.ToString().Contains("application/xml")))
+                if (!Request.Headers.TryGetValue("Content-Type", out var contentType) 
+                    || !contentType.ToString().Contains("application/json"))
                 {
-                    return BadRequest("Invalid Content-Type. Must be text/xml or application/xml");
+                    return BadRequest("Invalid Content-Type");
                 }
 
                 if (!ModelState.IsValid)
