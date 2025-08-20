@@ -3,6 +3,7 @@ using BRGateway24.Models;
 using BRGateway24.Repository.AuditRepo;
 using BRGateway24.Repository.Common;
 using BRGateway24.Repository.TISS;
+using BRGateway24.Repository.TISS.Mock;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.MSSqlServer;
@@ -24,8 +25,20 @@ namespace BRGateway24.Helpers
             services.AddSingleton<HealthyChecks>();
 
             services.AddScoped<ITISSParticipantRepo, TISSParticipantRepo>();
+            //services.AddScoped<ITissClientService, TissClientService>();
+
+            //services.AddHttpClient<ITissClientService, TissClientService>(client =>
+            //{
+            //    client.BaseAddress = new Uri("https://196.46.101.90:8443/rtgs/");
+            //    client.DefaultRequestHeaders.Accept.Add(
+            //        new MediaTypeWithQualityHeaderValue("application/json"));
+            //});
+
+            // Add to your service registration in Program.cs
+            services.AddScoped<IMockTissService, MockTissService>();
             services.AddScoped<ITissClientService, TissClientService>();
 
+            // Configure HttpClient for TISS
             services.AddHttpClient<ITissClientService, TissClientService>(client =>
             {
                 client.BaseAddress = new Uri("https://196.46.101.90:8443/rtgs/");
@@ -33,7 +46,7 @@ namespace BRGateway24.Helpers
                     new MediaTypeWithQualityHeaderValue("application/json"));
             });
 
-
+            
 
             string dbConn = Constants.GetConnectionString(appSettings.DBType, appSettings.DBServerName, appSettings.DatabaseName, appSettings.BRUserName, appSettings.BRUserPassword, "BRGateway24API");
 

@@ -1,9 +1,10 @@
 ﻿using BRGateway24.Models;
+using BRGateway24.Repository.TISS.Mock;
+using Microsoft.Extensions.Configuration;
 using System.Net.Http.Headers;
 
 namespace BRGateway24.Repository.TISS
 {
-
     public interface ITissClientService
     {
         Task<HttpResponseMessage> SendRequestAsync(
@@ -17,15 +18,30 @@ namespace BRGateway24.Repository.TISS
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<TissClientService> _logger;
+        private readonly IConfiguration _configuration;
+        private readonly IMockTissService _mockTissService;
+        private readonly bool _useMockService;
 
-        public TissClientService(HttpClient httpClient, ILogger<TissClientService> logger)
+        public TissClientService(
+            HttpClient httpClient,
+            ILogger<TissClientService> logger,
+            IConfiguration configuration,
+            IMockTissService mockTissService)
         {
             _httpClient = httpClient;
             _logger = logger;
+            _configuration = configuration;
+            _mockTissService = mockTissService;
 
-            _httpClient.BaseAddress = new Uri("https://196.46.101.90:8443/rtgs/");
-            _httpClient.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            // Check if we should use mock service (when TISS server is not accessible)
+            _useMockService = _configuration.GetValue<bool>("TISS:UseMockService", true);
+
+            if (!_useMockService)
+            {
+                _httpClient.BaseAddress = new Uri("https://196.46.101.90:8443/rtgs/");
+                _httpClient.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+            }
         }
 
         public async Task<HttpResponseMessage> SendRequestAsync(
@@ -34,6 +50,114 @@ namespace BRGateway24.Repository.TISS
             TissApiHeaders headers,
             string content = null)
         {
+            if (_useMockService)
+            {
+                return await HandleMockRequestAsync(endpoint, method, headers, content);
+            }
+            else
+            {
+                return await HandleRealRequestAsync(endpoint, method, headers, content);
+            }
+        }
+
+        // Repository/TISS/TissClientService.cs
+        private async Task<HttpResponseMessage> HandleMockRequestAsync(
+            string endpoint,
+            HttpMethod method,
+            TissApiHeaders headers,
+            string content)
+        {
+            _logger.LogInformation("Using mock TISS service for endpoint: {Endpoint}", endpoint);
+
+            try
+            {
+                string responseContent;
+                HttpResponseMessage response;
+
+                // Extract the endpoint name from the full path
+                var endpointName = GetEndpointName(endpoint);
+
+                switch (endpointName.ToLower())
+                {
+                    case "businessdate":
+                        responseContent = await _mockTissService.GetBusinessDateAsync(headers.Currency);
+                        response = new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+                        {
+                            Content = new StringContent(responseContent, System.Text.Encoding.UTF8, "application/json")
+                        };
+                        break;
+
+                    case "currenttimetableevent":
+                        responseContent = await _mockTissService.GetCurrentTimetableEventAsync(headers.Currency);
+                        response = new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+                        {
+                            Content = new StringContent(responseContent, System.Text.Encoding.UTF8, "application/json")
+                        };
+                        break;
+
+                    case "message":
+                        responseContent = await _mockTissService.PostMessageAsync(headers, content);
+                        response = new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+                        {
+                            Content = new StringContent(responseContent, System.Text.Encoding.UTF8, "text/xml")
+                        };
+                        break;
+
+                    case "pendingtransactions":
+                        responseContent = await _mockTissService.GetPendingTransactionsAsync(headers.Sender, headers.Currency, headers.Authorization);
+                        response = new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+                        {
+                            Content = new StringContent(responseContent, System.Text.Encoding.UTF8, "application/json")
+                        };
+                        break;
+
+                    case "accountsactivity":
+                        responseContent = await _mockTissService.GetAccountsActivityAsync(headers.Sender, headers.Currency, headers.Authorization);
+                        response = new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+                        {
+                            Content = new StringContent(responseContent, System.Text.Encoding.UTF8, "application/json")
+                        };
+                        break;
+
+                    default:
+                        response = new HttpResponseMessage(System.Net.HttpStatusCode.NotFound)
+                        {
+                            Content = new StringContent("Endpoint not found")
+                        };
+                        break;
+                }
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Mock TISS service error for endpoint: {Endpoint}", endpoint);
+                return new HttpResponseMessage(System.Net.HttpStatusCode.InternalServerError)
+                {
+                    Content = new StringContent($"Mock service error: {ex.Message}")
+                };
+            }
+        }
+
+        // Helper method to extract endpoint name from full path
+        private string GetEndpointName(string fullEndpoint)
+        {
+            if (string.IsNullOrEmpty(fullEndpoint))
+                return fullEndpoint;
+
+            // Remove the base path and get just the endpoint name
+            var parts = fullEndpoint.Split('/');
+            return parts.LastOrDefault() ?? fullEndpoint;
+        }
+
+        private async Task<HttpResponseMessage> HandleRealRequestAsync(
+            string endpoint,
+            HttpMethod method,
+            TissApiHeaders headers,
+            string content)
+        {
+            _logger.LogInformation("Sending real request to TISS endpoint: {Endpoint}", endpoint);
+
             try
             {
                 var request = new HttpRequestMessage(method, endpoint);
@@ -74,10 +198,6 @@ namespace BRGateway24.Repository.TISS
                     request.Content.Headers.ContentType = new MediaTypeHeaderValue(headers.ContentType);
                 }
 
-                // Log the request for debugging
-                _logger.LogInformation("Sending {Method} request to {Endpoint}", method, endpoint);
-                _logger.LogDebug("Headers: {Headers}", string.Join(", ", request.Headers.Select(h => $"{h.Key}: {string.Join(",", h.Value)}")));
-
                 // Bypass SSL certificate validation (remove in production)
                 var handler = new HttpClientHandler
                 {
@@ -88,14 +208,7 @@ namespace BRGateway24.Repository.TISS
                 client.BaseAddress = _httpClient.BaseAddress;
                 client.Timeout = TimeSpan.FromSeconds(30);
 
-                var response = await client.SendAsync(request);
-
-                // Log response for debugging
-                _logger.LogInformation("Received response: {StatusCode}", response.StatusCode);
-                var responseContent = await response.Content.ReadAsStringAsync();
-                _logger.LogDebug("Response content: {Content}", responseContent);
-
-                return response;
+                return await client.SendAsync(request);
             }
             catch (Exception ex)
             {

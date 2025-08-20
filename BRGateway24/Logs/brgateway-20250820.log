@@ -546,3 +546,94 @@ System.Net.Http.HttpRequestException: A connection attempt failed because the co
 2025-08-20 09:54:08.682 +03:00 [INF] Executed action TISSParticipantController.GetBusinessDate (BRGateway24) in 25978.3024ms
 2025-08-20 09:54:08.691 +03:00 [INF] Executed endpoint 'TISSParticipantController.GetBusinessDate (BRGateway24)'
 2025-08-20 09:54:08.700 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/businessDate - 500 null application/json; charset=utf-8 26042.4679ms
+2025-08-20 11:35:38.920 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-20 11:35:39.058 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 11:35:39.062 +03:00 [INF] Hosting environment: Development
+2025-08-20 11:35:39.064 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-20 11:35:40.048 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-20 11:35:40.045 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-20 11:35:40.116 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 85.5674ms
+2025-08-20 11:35:40.364 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 337.0294ms
+2025-08-20 11:35:40.456 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-20 11:35:40.541 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.2562ms
+2025-08-20 11:36:15.021 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/businessDate - null null
+2025-08-20 11:36:15.056 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-20 11:36:15.064 +03:00 [INF] Executing endpoint 'TISSParticipantController.GetBusinessDate (BRGateway24)'
+2025-08-20 11:36:15.099 +03:00 [INF] Route matched with {action = "GetBusinessDate", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBusinessDate() on controller TISSParticipantController (BRGateway24).
+2025-08-20 11:36:17.258 +03:00 [INF] Using mock TISS service for endpoint: interface/participants/businessDate
+2025-08-20 11:36:17.907 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 11:36:18.011 +03:00 [INF] Executed action TISSParticipantController.GetBusinessDate (BRGateway24) in 2886.4949ms
+2025-08-20 11:36:18.021 +03:00 [INF] Executed endpoint 'TISSParticipantController.GetBusinessDate (BRGateway24)'
+2025-08-20 11:36:18.032 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/businessDate - 404 null application/json; charset=utf-8 3011.0098ms
+2025-08-20 11:36:56.599 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/accountsActivity?accountId=5667778&fromDate=00-9-8999&toDate=7-8-0078 - null null
+2025-08-20 11:36:56.614 +03:00 [INF] Executing endpoint 'TISSParticipantController.GetAccountsActivity (BRGateway24)'
+2025-08-20 11:36:56.655 +03:00 [INF] Route matched with {action = "GetAccountsActivity", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAccountsActivity(System.String, System.String, System.String) on controller TISSParticipantController (BRGateway24).
+2025-08-20 11:36:58.039 +03:00 [INF] Using mock TISS service for endpoint: interface/participants/accountsActivity&accountId=5667778&toDate=0078-07-08
+2025-08-20 11:36:58.409 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 11:36:58.417 +03:00 [INF] Executed action TISSParticipantController.GetAccountsActivity (BRGateway24) in 1756.3541ms
+2025-08-20 11:36:58.424 +03:00 [INF] Executed endpoint 'TISSParticipantController.GetAccountsActivity (BRGateway24)'
+2025-08-20 11:36:58.430 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/accountsActivity?accountId=5667778&fromDate=00-9-8999&toDate=7-8-0078 - 404 null application/json; charset=utf-8 1831.0376ms
+2025-08-20 11:55:43.299 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-20 11:55:43.420 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 11:55:43.424 +03:00 [INF] Hosting environment: Development
+2025-08-20 11:55:43.426 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-20 11:55:44.297 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-20 11:55:44.298 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-20 11:55:44.362 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 70.7676ms
+2025-08-20 11:55:44.437 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 158.723ms
+2025-08-20 11:55:44.531 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-20 11:55:44.593 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 62.8474ms
+2025-08-20 11:55:48.169 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/accountsActivity?accountId=5667778&fromDate=00-9-8999&toDate=7-8-0078 - null null
+2025-08-20 11:55:48.207 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-20 11:55:48.219 +03:00 [INF] Executing endpoint 'TISSParticipantController.GetAccountsActivity (BRGateway24)'
+2025-08-20 11:55:48.255 +03:00 [INF] Route matched with {action = "GetAccountsActivity", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAccountsActivity(System.String, System.String, System.String) on controller TISSParticipantController (BRGateway24).
+2025-08-20 11:55:48.931 +03:00 [INF] Using mock TISS service for endpoint: interface/participants/accountsActivity&accountId=5667778&toDate=0078-07-08
+2025-08-20 11:55:49.109 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 11:55:49.152 +03:00 [INF] Executed action TISSParticipantController.GetAccountsActivity (BRGateway24) in 885.1957ms
+2025-08-20 11:55:49.162 +03:00 [INF] Executed endpoint 'TISSParticipantController.GetAccountsActivity (BRGateway24)'
+2025-08-20 11:55:49.173 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/accountsActivity?accountId=5667778&fromDate=00-9-8999&toDate=7-8-0078 - 404 null application/json; charset=utf-8 1003.8404ms
+2025-08-20 11:56:01.037 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/businessDate - null null
+2025-08-20 11:56:01.054 +03:00 [INF] Executing endpoint 'TISSParticipantController.GetBusinessDate (BRGateway24)'
+2025-08-20 11:56:01.066 +03:00 [INF] Route matched with {action = "GetBusinessDate", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBusinessDate() on controller TISSParticipantController (BRGateway24).
+2025-08-20 11:56:01.218 +03:00 [INF] Using mock TISS service for endpoint: interface/participants/businessDate
+2025-08-20 11:56:01.227 +03:00 [INF] Mock TISS: Returning business date for currency: TZS
+2025-08-20 11:56:01.372 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 11:56:01.384 +03:00 [INF] Executed action TISSParticipantController.GetBusinessDate (BRGateway24) in 310.2588ms
+2025-08-20 11:56:01.391 +03:00 [INF] Executed endpoint 'TISSParticipantController.GetBusinessDate (BRGateway24)'
+2025-08-20 11:56:01.398 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/businessDate - 200 null application/json; charset=utf-8 361.0721ms
+2025-08-20 11:56:36.363 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/currentTimetableEvent - null null
+2025-08-20 11:56:36.373 +03:00 [INF] Executing endpoint 'TISSParticipantController.GetCurrentTimetableEvent (BRGateway24)'
+2025-08-20 11:56:36.385 +03:00 [INF] Route matched with {action = "GetCurrentTimetableEvent", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrentTimetableEvent() on controller TISSParticipantController (BRGateway24).
+2025-08-20 11:56:37.253 +03:00 [INF] Using mock TISS service for endpoint: interface/participants/currentTimetableEvent
+2025-08-20 11:56:37.262 +03:00 [INF] Mock TISS: Returning current timetable event for currency: TZS
+2025-08-20 11:56:37.638 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 11:56:37.647 +03:00 [INF] Executed action TISSParticipantController.GetCurrentTimetableEvent (BRGateway24) in 1251.235ms
+2025-08-20 11:56:37.655 +03:00 [INF] Executed endpoint 'TISSParticipantController.GetCurrentTimetableEvent (BRGateway24)'
+2025-08-20 11:56:37.661 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/currentTimetableEvent - 200 null application/json; charset=utf-8 1297.8033ms
+2025-08-20 12:04:33.418 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/v1/MX/interface/participants/message - application/json 4133
+2025-08-20 12:04:33.427 +03:00 [INF] Executing endpoint 'TISSParticipantController.PostMessage (BRGateway24)'
+2025-08-20 12:04:33.432 +03:00 [INF] Route matched with {action = "PostMessage", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostMessage(BRGateway24.Models.TissSendMessageRequest) on controller TISSParticipantController (BRGateway24).
+2025-08-20 12:04:33.665 +03:00 [INF] Sending message with Reference: DEMO0601223
+2025-08-20 12:04:33.818 +03:00 [INF] Using mock TISS service for endpoint: interface/participants/message
+2025-08-20 12:04:33.901 +03:00 [INF] Mock TISS: Processing message with MsgId: DEMO0601223
+2025-08-20 12:04:34.586 +03:00 [ERR] Failed to store message locally
+Microsoft.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'sp_TISS_StoreMessage'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at BRGateway24.Repository.TISS.TISSParticipantRepo.StoreMessageLocally(String messageType, String payloadXml, String reference) in C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\Repository\TISS\TISSParticipantRepo.cs:line 541
+ClientConnectionId:7c167087-c498-4a6f-83c2-17c2be5156a9
+Error Number:2812,State:62,Class:16
+2025-08-20 12:04:34.629 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 12:04:34.637 +03:00 [INF] Executed action TISSParticipantController.PostMessage (BRGateway24) in 1370.2234ms
+2025-08-20 12:04:34.644 +03:00 [INF] Executed endpoint 'TISSParticipantController.PostMessage (BRGateway24)'
+2025-08-20 12:04:34.649 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/v1/MX/interface/participants/message - 200 null application/json; charset=utf-8 1406.3306ms
