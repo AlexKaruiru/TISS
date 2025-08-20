@@ -18,6 +18,8 @@ namespace BRGateway24.Models
 
         // For POST messages only
         public string ContentType { get; set; } = "application/xml";
+
+        // For POST messages only
         public string PayloadType { get; set; } = "XML";
 
         public string Currency { get; set; } = "TZS";

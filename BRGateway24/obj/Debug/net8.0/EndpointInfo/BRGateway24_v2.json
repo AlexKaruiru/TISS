@@ -12,14 +12,6 @@
         ],
         "parameters": [
           {
-            "name": "currency",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "TZS"
-            }
-          },
-          {
             "name": "token",
             "in": "header",
             "required": true,
@@ -41,14 +33,6 @@
           "MX"
         ],
         "parameters": [
-          {
-            "name": "currency",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "TZS"
-            }
-          },
           {
             "name": "token",
             "in": "header",
@@ -113,21 +97,6 @@
         ],
         "parameters": [
           {
-            "name": "sender",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "currency",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "TZS"
-            }
-          },
-          {
             "name": "token",
             "in": "header",
             "required": true,
@@ -150,13 +119,6 @@
         ],
         "parameters": [
           {
-            "name": "sender",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "accountId",
             "in": "query",
             "schema": {
@@ -175,14 +137,6 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "currency",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "TZS"
             }
           },
           {

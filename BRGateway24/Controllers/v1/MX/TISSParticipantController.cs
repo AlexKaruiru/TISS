@@ -22,7 +22,7 @@ public class TISSParticipantController : ControllerBase
     }
 
     [HttpGet("businessDate")]
-    public async Task<IActionResult> GetBusinessDate([FromQuery] string currency = "TZS")
+    public async Task<IActionResult> GetBusinessDate()
     {
         try
         {
@@ -31,9 +31,6 @@ public class TISSParticipantController : ControllerBase
             {
                 return StatusCode(500, new { Error = "Service configuration error" });
             }
-
-            // Set currency parameter
-            headers.Currency = currency;
 
             var response = await _tissRepo.GetBusinessDateAsync(headers);
             return HandleTissResponse(response);
@@ -46,7 +43,7 @@ public class TISSParticipantController : ControllerBase
     }
 
     [HttpGet("currentTimetableEvent")]
-    public async Task<IActionResult> GetCurrentTimetableEvent([FromQuery] string currency = "TZS")
+    public async Task<IActionResult> GetCurrentTimetableEvent()
     {
         try
         {
@@ -55,9 +52,6 @@ public class TISSParticipantController : ControllerBase
             {
                 return StatusCode(500, new { Error = "Service configuration error" });
             }
-
-            // Set currency parameter
-            headers.Currency = currency;
 
             var response = await _tissRepo.GetCurrentTimetableEventAsync(headers);
             return HandleTissResponse(response);
@@ -76,7 +70,7 @@ public class TISSParticipantController : ControllerBase
         {
             if (!Request.Headers.TryGetValue("Content-Type", out var contentType) || !contentType.ToString().Contains("application/json"))
             {
-                return BadRequest(new { Error = "Invalid Content-Type. Must be text/xml or application/xml" });
+                return BadRequest(new { Error = "Invalid Content-Type. Must be application/json" });
             }
 
             if (!ModelState.IsValid)
@@ -92,7 +86,6 @@ public class TISSParticipantController : ControllerBase
 
             // Set message-specific headers
             headers.MsgId = request.Reference;
-            headers.ContentType = contentType.ToString();
             headers.PayloadType = "XML";
 
             _logger.LogInformation("Sending message with Reference: {Reference}", request.Reference);
@@ -113,28 +106,17 @@ public class TISSParticipantController : ControllerBase
     }
 
     [HttpGet("pendingTransactions")]
-    public async Task<IActionResult> GetPendingTransactions(
-        [FromQuery] string sender, // Required parameter
-        [FromQuery] string currency = "TZS")
+    public async Task<IActionResult> GetPendingTransactions()
     {
         try
         {
-            if (string.IsNullOrEmpty(sender))
-            {
-                return BadRequest(new { Error = "sender parameter is required" });
-            }
-
             var headers = await _tissRepo.GetTissApiHeaders();
             if (headers == null)
             {
                 return StatusCode(500, new { Error = "Service configuration error" });
             }
 
-            // Set required parameters
-            headers.Sender = sender;
-            headers.Currency = currency;
-
-            var response = await _tissRepo.GetPendingTransactionsAsync(sender, currency, headers);
+            var response = await _tissRepo.GetPendingTransactionsAsync(headers);
             return HandleTissResponse(response);
         }
         catch (Exception ex)
@@ -146,28 +128,17 @@ public class TISSParticipantController : ControllerBase
 
     [HttpGet("accountsActivity")]
     public async Task<IActionResult> GetAccountsActivity(
-        [FromQuery] string sender, // Required parameter
         [FromQuery] string accountId = null,
         [FromQuery] string fromDate = null,
-        [FromQuery] string toDate = null,
-        [FromQuery] string currency = "TZS")
+        [FromQuery] string toDate = null)
     {
         try
         {
-            if (string.IsNullOrEmpty(sender))
-            {
-                return BadRequest(new { Error = "sender parameter is required" });
-            }
-
             var headers = await _tissRepo.GetTissApiHeaders();
             if (headers == null)
             {
                 return StatusCode(500, new { Error = "Service configuration error" });
             }
-
-            // Set required parameters
-            headers.Sender = sender;
-            headers.Currency = currency;
 
             DateTime? fromDateDt = null;
             DateTime? toDateDt = null;
@@ -183,11 +154,9 @@ public class TISSParticipantController : ControllerBase
             }
 
             var response = await _tissRepo.GetAccountActivitiesAsync(
-                sender,
                 accountId,
                 fromDateDt,
                 toDateDt,
-                currency,
                 headers);
 
             return HandleTissResponse(response);

@@ -24,11 +24,6 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "sender",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "accountId",
         "Type": "System.String",
         "IsRequired": false
@@ -40,11 +35,6 @@
       },
       {
         "Name": "toDate",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "currency",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -61,13 +51,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "currency",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [],
     "Tags": [
       "MX"
@@ -80,13 +64,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "currency",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [],
     "Tags": [
       "MX"
@@ -118,18 +96,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sender",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "currency",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [],
     "Tags": [
       "MX"

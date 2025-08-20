@@ -264,14 +264,14 @@ namespace BRGateway24.Repository.TISS
             return response;
         }
 
-        public async Task<MainResponse> GetPendingTransactionsAsync(string participantId, string currency, TissApiHeaders headers)
+        public async Task<MainResponse> GetPendingTransactionsAsync(TissApiHeaders headers)
         {
             var response = new MainResponse();
             long requestId = 0;
 
             try
             {
-                var endpoint = $"interface/participants/pendingTransactions?sender={participantId}&currency={currency}";
+                var endpoint = $"interface/participants/pendingTransactions";
 
                 requestId = await LogRequest(new TissApiRequest
                 {
@@ -327,11 +327,9 @@ namespace BRGateway24.Repository.TISS
         }
 
         public async Task<MainResponse> GetAccountActivitiesAsync(
-            string participantId,
             string accountId,
             DateTime? fromDate,
             DateTime? toDate,
-            string currency,
             TissApiHeaders headers)
         {
             var response = new MainResponse();
@@ -339,7 +337,7 @@ namespace BRGateway24.Repository.TISS
 
             try
             {
-                var endpoint = $"interface/participants/accountsActivity?sender={participantId}&currency={currency}";
+                var endpoint = $"interface/participants/accountsActivity";
 
                 if (!string.IsNullOrEmpty(accountId))
                     endpoint += $"&accountId={Uri.EscapeDataString(accountId)}";
