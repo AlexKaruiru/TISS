@@ -427,3 +427,122 @@ System.Net.Http.HttpRequestException: A connection attempt failed because the co
 2025-08-20 09:39:33.046 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 599.0072ms
 2025-08-20 09:39:33.051 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
 2025-08-20 09:39:33.055 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/Token/Login - 200 null application/json; charset=utf-8 731.5009ms
+2025-08-20 09:46:58.187 +03:00 [INF] Now listening on: http://localhost:5263
+2025-08-20 09:46:58.861 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 09:46:58.866 +03:00 [INF] Hosting environment: Development
+2025-08-20 09:46:58.869 +03:00 [INF] Content root path: C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24
+2025-08-20 09:46:59.727 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-20 09:46:59.728 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/_vs/browserLink - null null
+2025-08-20 09:46:59.768 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 58.9351ms
+2025-08-20 09:46:59.989 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/_vs/browserLink - 200 null text/javascript; charset=UTF-8 283.1807ms
+2025-08-20 09:47:00.130 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+2025-08-20 09:47:00.206 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.6257ms
+2025-08-20 09:47:24.423 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/Token/Login - application/json 178
+2025-08-20 09:47:24.464 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-20 09:47:24.471 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-20 09:47:24.502 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-20 09:47:34.332 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-20T09:35:00",
+    "IPAddress": "172.16.2.58",
+    "LoginFailureIPAddress": null,
+    "RoleID": "GMOPS",
+    "Status": 1,
+    "SessionID": "cce52614-6a5a-428f-afb9-dc7b8a8549ebBRNET_LIVE14EKIJA172.16.2.58",
+    "UserID": "0000025",
+    "Username": "EKIJA",
+    "Firstname": "EKIJA",
+    "Lastname": "EKIJA",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-20 09:47:34.593 +03:00 [INF] Executing OkObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-20 09:47:34.625 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 10109.4729ms
+2025-08-20 09:47:34.634 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-20 09:47:34.642 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/Token/Login - 200 null application/json; charset=utf-8 10218.0737ms
+2025-08-20 09:51:12.525 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/Token/Login - application/json 178
+2025-08-20 09:51:12.554 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-20 09:51:12.561 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-20 09:52:10.872 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 09:52:10.881 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 58310.7761ms
+2025-08-20 09:52:10.885 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-20 09:52:10.888 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/Token/Login - 401 null application/json; charset=utf-8 58362.9166ms
+2025-08-20 09:52:18.337 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5263/Token/Login - application/json 178
+2025-08-20 09:52:18.358 +03:00 [INF] Executing endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-20 09:52:18.363 +03:00 [INF] Route matched with {action = "Generate", controller = "Token"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Generate(BRGateway24.Models.HeaderRequest) on controller BRGateway24.Controllers.TokenController (BRGateway24).
+2025-08-20 09:52:25.746 +03:00 [INF] AuthenticateUser list: [
+  {
+    "LanguageID": "en",
+    "Password": "g2yOsPr8JUgneu8n2JVIloW4mH5NXV1/qHvd7zKcpAU=",
+    "TimeLoggedIn": "2025-08-20T09:35:00",
+    "IPAddress": "172.16.2.58",
+    "LoginFailureIPAddress": null,
+    "RoleID": "GMOPS",
+    "Status": 1,
+    "SessionID": "cce52614-6a5a-428f-afb9-dc7b8a8549ebBRNET_LIVE14EKIJA172.16.2.58",
+    "UserID": "0000025",
+    "Username": "EKIJA",
+    "Firstname": "EKIJA",
+    "Lastname": "EKIJA",
+    "Email": "",
+    "PhoneNumber": "",
+    "ProfilePic": "/upload/blank-person.png",
+    "OutputJSON": null
+  }
+]
+2025-08-20 09:52:25.760 +03:00 [INF] Executing OkObjectResult, writing value of type 'BRGateway24.Models.LoginReq'.
+2025-08-20 09:52:25.771 +03:00 [INF] Executed action BRGateway24.Controllers.TokenController.Generate (BRGateway24) in 7400.6635ms
+2025-08-20 09:52:25.814 +03:00 [INF] Executed endpoint 'BRGateway24.Controllers.TokenController.Generate (BRGateway24)'
+2025-08-20 09:52:25.820 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5263/Token/Login - 200 null application/json; charset=utf-8 7483.1504ms
+2025-08-20 09:53:42.659 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/businessDate - null null
+2025-08-20 09:53:42.683 +03:00 [INF] Executing endpoint 'TISSParticipantController.GetBusinessDate (BRGateway24)'
+2025-08-20 09:53:42.696 +03:00 [INF] Route matched with {action = "GetBusinessDate", controller = "TISSParticipant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBusinessDate() on controller TISSParticipantController (BRGateway24).
+2025-08-20 09:53:44.963 +03:00 [INF] Sending GET request to interface/participants/businessDate
+2025-08-20 09:54:06.268 +03:00 [ERR] Error sending request to TISS server for endpoint: interface/participants/businessDate
+System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (196.46.101.90:8443)
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at BRGateway24.Repository.TISS.TissClientService.SendRequestAsync(String endpoint, HttpMethod method, TissApiHeaders headers, String content) in C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\Repository\TISS\TissClientService.cs:line 91
+2025-08-20 09:54:06.502 +03:00 [ERR] Error in GetBusinessDateAsync
+System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (196.46.101.90:8443)
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at BRGateway24.Repository.TISS.TissClientService.SendRequestAsync(String endpoint, HttpMethod method, TissApiHeaders headers, String content) in C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\Repository\TISS\TissClientService.cs:line 91
+   at BRGateway24.Repository.TISS.TISSParticipantRepo.GetBusinessDateAsync(TissApiHeaders headers) in C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\Repository\TISS\TISSParticipantRepo.cs:line 162
+2025-08-20 09:54:08.662 +03:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-20 09:54:08.682 +03:00 [INF] Executed action TISSParticipantController.GetBusinessDate (BRGateway24) in 25978.3024ms
+2025-08-20 09:54:08.691 +03:00 [INF] Executed endpoint 'TISSParticipantController.GetBusinessDate (BRGateway24)'
+2025-08-20 09:54:08.700 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/v1/MX/interface/participants/businessDate - 500 null application/json; charset=utf-8 26042.4679ms

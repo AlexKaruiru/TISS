@@ -1,0 +1,9 @@
+# Visual Studio 
+.vs/
+
+# Binaries and build outputs 
+bin/Debug/
+obj/
+
+# Log files
+*.log
