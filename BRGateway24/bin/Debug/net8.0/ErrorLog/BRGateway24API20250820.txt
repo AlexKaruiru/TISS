@@ -1,7 +1,0 @@
-User ID : BRGateway24API
-Request Name: CheckUser
-Date:8/20/2025 9:52:10 AM
-Error Message : System.NullReferenceException: Object reference not set to an instance of an object.
-   at SwiftApi.Repository.Security.SystemSecurity.CheckUser(String username, String password, String strUniqueID, AuthenticateUser& authenticateUser, String& resJSON) in C:\Users\alex.ndegwa\Desktop\BRNET\TISS\BRGateway24\Repository\Security\SystemSecurity.cs:line 534
-Error Data : 
-==================================================
